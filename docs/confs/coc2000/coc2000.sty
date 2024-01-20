@@ -1,0 +1,214 @@
+%%% =========================================================================
+%%%  @LaTeX-style-file{
+%%%     author          = "Silvano Balemi",
+%%%     version         = "1.4",
+%%%     date            = "8-JUNE-93",
+%%%     filename        = "ACCarticle.sty",
+%%%     docstring       = "This is a LaTeX style file for camera ready
+%%%                        articles according to instructions of the
+%%%                        IEEE American Control Conference (ACC).
+%%%                        The default font size is 10 points.
+%%%
+%%%                        You may want to adjust the position of the
+%%%                        text on the page (for your specific
+%%%                        printer) with the commands
+%%%                           \addtolength{\oddsidemargin}{Xmm} % right Xmm
+%%%                           \addtolength{\topmargin}{Ymm}     % down Ymm
+%%% }
+%%% =========================================================================
+%%%
+%%%     LaTeX-style-file adapted for IEEE CDC 1996 publications specifications
+%%%     for exact size printing on A4 paper
+%%%     (also to be used for IEEE CDC 1997 and ACC 1997).
+%%%
+%%% =========================================================================
+%%%
+%%%     LaTeX-style-file revised for COC'2000 Conference Proceedings
+%%%     by Alexander Churilov, November 1999
+%%%
+%%% =========================================================================
+
+\typeout{Document Style `coc2000' <20-NOVEMBER-99>.} %Rev. A. Churilov
+
+\input article.sty\relax
+\def\keywords#1{}
+
+\textheight 240mm       %Rev. A. Churilov
+\textwidth 165mm        %Rev. A. Churilov
+\columnsep 5mm          %Rev. A. Churilov
+\parindent 0pt
+\parskip 1em    % Spacing around sectioning now robust wrt changes in parskip
+\oddsidemargin -4mm   %Rev. A. Churilov
+\evensidemargin -4mm  %Rev. A. Churilov
+\topmargin -15mm        %Rev. A. Churilov
+\twocolumn
+\sloppy
+\flushbottom
+
+\def\maketitle{\par
+ \begingroup
+ \def\@makefnmark{\hbox{$^{\@thefnmark}$\hss}}
+ \if@twocolumn
+ \twocolumn[\@maketitle]
+ \else \newpage
+ \global\@topnum\z@ \@maketitle \fi\pagestyle{empty}\@thanks %Rev. A.Churilov
+ \endgroup
+ \let\maketitle\relax
+ \let\@maketitle\relax
+ \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\thanks\relax}
+
+\def\@maketitle{\newpage
+ \null \vskip .3em       %Rev. <20-JUNE-96> C. Schrader
+\begin{center}
+ {\LARGE\bf \@title \par} \vskip 1.5em {\large \lineskip .5em
+ \begin{tabular}[t]{c}\@author
+ \end{tabular}\par}
+ \end{center}
+ \par
+ \vskip 1.5em}
+
+\def\@startsection#1#2#3#4#5#6#7{\if@noskipsec \leavevmode \fi
+   \par \@tempskipa #4\relax
+   \@afterindenttrue
+   \ifdim \@tempskipa <\z@ \@tempskipa -\@tempskipa \@afterindentfalse\fi
+   \addtolength{\@tempskipa}{-\parskip}
+   \if@nobreak \everypar{}\else
+     \addpenalty{\@secpenalty}\addvspace{\@tempskipa}\fi
+     \@ifstar
+     {\@ssect{#1}{#2}{#3}{#4}{#5}{#6}{#7}}
+     {\@dblarg{\@sect{#1}{#2}{#3}{#4}{#5}{#6}{#7}}}}
+
+\def\@sect#1#2#3#4#5#6#7[#8]#9{
+   \ifnum #2>\c@secnumdepth
+      \def\@svsec{}
+   \else
+      \ifnum #2> 2 % if it is subsubsection, paragraph  ...
+        \refstepcounter{#1}\edef\@svsec{{\csname the#1\endcsname}\hskip .5em }
+      \else        % if it is section or subsection, put "." after number
+         %Rev. <20-JUNE-96> C. Schrader ("." removed)
+        \refstepcounter{#1}\edef\@svsec{{\csname the#1\endcsname}\hskip .5em }
+      \fi
+   \fi
+   \@tempskipa #5\relax
+   \ifdim \@tempskipa>\z@
+      \begingroup #6\relax
+      \ifnum #2 > 1  % if it is not a section ..
+         %% header indented at right of section number
+         %\@hangfrom{\hskip #3\relax\@svsec}{\interlinepenalty \@M #8#7\par}
+         %% header on the same line as section number
+         \@hangfrom{\hskip #3\relax}{\@svsec\interlinepenalty \@M #8#7\par}
+      \else          % if it is a section ..
+         \setbox1=\hbox{\@svsec #8#7}
+         \ifdim \wd1>\columnwidth
+             {\centering\@svsec \interlinepenalty \@M #8#7\par}
+         \else  % if it is section AND not wider then width of column
+             \vskip\parskip\centerline{\@svsec\interlinepenalty\@M #8#7}\par
+         \fi
+      \fi
+      \endgroup
+      \csname #1mark\endcsname{#8}\addcontentsline
+         {toc}{#1}{\ifnum #2>\c@secnumdepth \else
+                      \protect\numberline{\csname the#1\endcsname}\fi
+                    #8}
+   \else
+        \def\@svsechd{#6\hskip #3\@svsec #9#7\csname #1mark\endcsname
+              {#8}\addcontentsline {toc}{#1}{\ifnum #2>\c@secnumdepth \else
+               \protect\numberline{\csname the#1\endcsname}\fi
+               #8}}
+   \fi
+   \@xsect{#5}}
+
+\def\@ssect#1#2#3#4#5#6#7#8{\@tempskipa #5\relax
+  \ifdim \@tempskipa>\z@
+     \begingroup #6\relax
+     \ifnum #2 > 1
+         \@hangfrom{\hskip #3}{\interlinepenalty\@M #8#7\par}
+     \else % if it is section AND not wider then width of column
+         \setbox1=\hbox{#8#7}
+         \ifdim \wd1>\columnwidth
+             {\centering#8#7\par}
+         \else
+             \vskip\parskip\centerline{#8#7}\par
+         \fi
+     \fi
+     \endgroup
+  \else
+     \def\@svsechd{#6\hskip #3\relax #8#7}
+  \fi
+  \@xsect{#5}}
+
+\def\@xsect#1{\@tempskipa #1\relax
+      \ifdim \@tempskipa>\z@
+       \par \nobreak
+       \addtolength{\@tempskipa}{-\parskip}
+       \vskip \@tempskipa
+       \@afterheading
+    \else \global\@nobreakfalse \global\@noskipsectrue
+       \everypar{\if@noskipsec \global\@noskipsecfalse
+                   \clubpenalty\@M \hskip -\parindent
+                   \begingroup \@svsechd \endgroup \unskip
+                   \hskip -#1
+                  \else \clubpenalty \@clubpenalty
+                    \everypar{}\fi}\fi\ignorespaces}
+
+\def\section{\@startsection{section}{1}{\z@}
+{6.5ex plus 0.5ex minus 0.5ex}{3ex plus 0.3ex}{\bf}{}}
+\def\subsection{\@startsection{subsection}{2}{\z@}{3.0ex plus
+.3ex minus .1ex}{0.01ex plus .0ex}{\bf}{}}
+\def\subsubsection{\@startsection{subsubsection}{3}{2em}{3.0ex plus
+.3ex minus .1ex}{-1em}{\bf}{:}}
+
+\def\thebibliography#1{\section*        %Rev. <20-JUNE-96> C. Schrader
+{References\@mkboth
+ {References}{References}}\parskip 0pt \list
+ {[\arabic{enumi}]\hfill}{\labelwidth 7mm \leftmargin\labelwidth
+ \itemindent 9mm \itemsep 0pt
+\advance\leftmargin -7mm
+ \usecounter{enumi}}
+ \def\newblock{\hskip .11em plus .33em minus .07em}
+ \sloppy\clubpenalty4000\widowpenalty4000
+ \sfcode`\.=1000\relax}
+\let\endthebibliography=\endlist
+
+% Rev. A. Churilov
+% Do not number pages!
+
+%%% Redefines captions
+\newlength{\captionindent}
+\long\def\@makecaption#1#2{
+      \vskip 10pt
+      \setbox\@tempboxa\hbox{{\bf #1:} \rm #2}
+      \ifdim \wd\@tempboxa >\hsize
+      \setbox\@tempboxa\hbox{\bf#1:~}
+      \setlength\captionindent{\wd\@tempboxa} % caption indent of width of #1
+%      \setlength\captionindent{0pt}           % no caption indent
+      \parbox[t]{\hsize}{\small \hangindent \captionindent \hangafter=1%
+      \unhbox\@tempboxa#2}
+      \else \hbox to\hsize{\hfil\box\@tempboxa\hfil}
+      \fi
+}
+
+%%% defines the QED square and the proof environment
+\def\QED{~\rule[-1pt]{5pt}{5pt}\par\medskip}
+\newenvironment{proof}{{\bf Proof: \ }}{ \hfill \QED}
+
+%%% used a tex at the foot of the article
+% Do not use footnotes!
+\renewcommand\footnote{}       %Rev. A. Churilov
+
+% set up default pagestyle
+\pagestyle{empty}               %Rev. A. Churilov
+
+%% make itemsep narrower
+\def\@normalsize{\@setsize\normalsize{11.9pt}\xpt\@xpt
+\abovedisplayskip 10pt plus2pt minus5pt
+\belowdisplayskip \abovedisplayskip
+\abovedisplayshortskip \z@ plus3pt
+\belowdisplayshortskip 6pt plus3pt minus3pt
+\def\@listi{\leftmargin\leftmargini
+ \topsep -\parskip \addtolength{\topsep}{0.5em}
+ \parsep 1pt plus 1pt minus 1pt
+ \itemsep 2pt plus 1pt minus 1pt
+}}
+
+

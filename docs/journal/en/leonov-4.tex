@@ -1,0 +1,128 @@
+\documentstyle{article}
+
+\topmargin=-10mm
+\oddsidemargin=-5mm
+\evensidemargin=-5mm
+\textwidth 16cm
+\textheight 23cm
+\hfuzz=1.5pt
+\makeindex
+
+\font\msbm=msbm10 scaled 1200
+\font\wr=jwr8 scaled 1200
+\font\wit=jwti8 scaled 1200
+
+\def\al {\alpha}
+\def\ba{\begin{array}}
+\def\be {\beta}
+\def\br {\hbox{\msbm R}}
+\def\de {\delta}
+\def\ea{\end{array}}
+\def\e  {\eta}
+\def\ga {\gamma}
+\def\f  {\frac}
+\def\la {\lambda}
+\def\liml{\lim\limits}
+\def\om {\omega}
+\def\sg {\sigma}
+\def\t  {\tau}
+\def\ve {\varepsilon}
+
+
+\begin{document}
+\pagestyle{plain}
+\large
+
+\begin{center}
+THE LYAPUNOV FUNCTIONS IN ESTIMATES OF A DIMENSION OF DYNAMICAL
+SYSTEM ATTRACTORS
+
+
+\medskip
+
+{\it G.A. Leonov}
+
+\smallskip
+
+{Dept. of Mathematics and Mechanics}
+
+{St.Petersburg State University}
+
+{2, Bibliotechnaya pl., Peterhof}
+
+{St.Petersburg 198504, Russia}
+
+{leonov@math.spbu.ru}
+\end{center}
+
+\medskip
+
+{\wit
+Abstract:
+}
+
+\bigskip
+
+\medskip
+
+The present work was reported in the Rokhlin memorial conference in August
+1999. It incorporates a review of the results, concerning  estimations of
+attractor dimensions by the Lyapunov functions.
+
+This line of investigation made possible to obtain the highly simple formulas
+for computing the Lyapunov dimension of the Henon and Lorenz attractors
+
+Consider the Henon mapping $F:\br^2\to\br^2$
+$$
+\ba{l}
+z\to a+by-z^2,\cr
+y\to z,
+\ea
+$$
+where $a>0$, $b\in(0,1)$.
+We shall consider here the Lyapunov dimension $\dim_L\,K$ of an invariant
+set $K$: $FK=K$, containing the following stationary points
+$$
+z_{\pm}=\f12\,\left[b-1\pm\sqrt{(b-1)^2+4a}\,\right].
+$$
+
+{\bf Theorem 1.} {\it
+For the mapping $F$ the equality
+$$
+\dim_L\,K=1+\f1{1-\ln b/\ln\al(z_-)}\,,
+$$
+where $\al(z_-)=\sqrt{z_-^2+b}-z_-$,
+}
+is valid.
+\medskip
+
+We now consider the Lorenz system
+$$
+\ba{l}
+\dot x=-\sg x+\sg y,\cr
+\dot y=rx-y-xz,\cr
+\dot z=-bz+xy,
+\ea \eqno(1)
+$$
+where $r,b,\sg$ are positive numbers. Suppose that
+$$
+\ba{l}
+b\geq2,\qquad \sg+1\geq b,\cr
+r\sg^2(4-b)+2\sg(b-1)(2\sg-3b)>b(b-1)^2
+\ea
+$$
+and denote by  $K$ an invariant set of system (1),
+containing the point $x=y=z=0$.
+
+\medskip
+
+{\bf Theorem 2.} {\it
+The following equality holds
+$$
+\dim_L\,K=3-\f{2(\sg+b+1)}{\sg+1+\sqrt{(\sg-1)^2+4r\sg}}\,.
+$$
+}
+
+
+\end{document}
+

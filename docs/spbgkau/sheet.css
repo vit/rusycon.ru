@@ -1,0 +1,67 @@
+body { font-family: Arial, Verdana, Tahoma; color: #000000}
+td { font-family: Arial, Verdana, Tahoma; font-size: 12px}
+td b{ font-family: Arial, Verdana, Tahoma; font-size: 12px; font-weight: bold}
+.smwhite { font-family: Arial, Tahoma, Verdana; font-size: 9px; color: #FFFFFF; text-decoration: none}
+input { font-family: Arial, Verdana, Tahoma; font-size: 9px}
+select { font-family: Arial, Verdana, Tahoma; font-size: 9px}
+textarea { font-family: Arial, Verdana, Tahoma; font-size: 12px}
+.sm { font-family: Arial, Verdana, Tahoma; font-size: 11px}
+.bgt { font-family: Times New Roman, Times; font-size: 20px}
+.bgtb { font-family: Times New Roman, Times; font-size: 20px; font-weight: bold}
+.bbgtb { font-family: Times New Roman, Times; font-size: 22px; font-weight: bold}
+.lgt { font-family: Times New Roman, Times; font-size: 18px}
+.lgtb { font-family: Times New Roman, Times; font-size: 18px; font-weight: bold}
+.med { font-size: 13px; color: #000000}
+.medb { font-size: 13px; color: #000000; font-weight: bold}
+.red { color: #FF0000}
+.blue { color: #0099FF}
+.titlewhite { font-family: Tahoma, Verdana, Arial; font-size: 10px; color: #FFFFFF; text-decoration: none ; font-weight: bold}
+.titlebold { font-family: Arial, Verdana, Tahoma; font-size: 16px; font-weight: bold}
+a { text-decoration: none; color: #333333 }
+td a { textdecoration: none; color: #576EFF }
+A:active {  text-decoration: none}
+A:link {  text-decoration: none; color: "#202090";}
+A:visited {  text-decoration: none; color: "#354590";}
+A:hover {  text-decoration: underline; color: "#576EFF"}
+A:hover {  textdecoration:"underline;" color:"#576EFF"}
+p.art { font-family: Times New Roman, Times; font-size: small; text-align: justify}
+span.art { font-family: Arial, Verdana, Tahoma; font-size: 14px; text-align: justify; color: #000000}
+.newmenu {color: white;  font-family: Tahoma, Verdana, Arial; font-size: 11px;  text-decoration: none}
+.locmenu {  font-family: Tahoma, Verdana, Arial; font-size: 10px; color: #001122; text-decoration: none; background:lightblue}
+.downmenu {  font-family: Tahoma, Verdana, Arial; font-size: 11px; color: #001122; text-decoration: none; background:lightblue}
+.upmenu {  font-family: Tahoma, Verdana, Arial; font-size: 11px; color: #001122; text-decoration: none; background:lightblue}
+.locnavi {  font-family: Tahoma, Verdana, Arial; font-size: 10px; color: #001122; text-decoration: none; background:#2DC0C2; position:static; margin-top:-15;  height:18; }
+.icon {margin-left: 12px; text-indent: -12px; margin-top: 0px; margin-bottom: 5px}
+.top10 {margin-left: 30px; text-indent: -30px; margin-top: 0px; margin-bottom: 0px}
+a.newmenu:link
+{  font-family: Tahoma, Verdana, Arial; font-size: 11px; color: #FFFFFF; text-decoration: none}
+a.newmenu:visited
+{  font-family: Tahoma, Verdana, Arial; font-size: 11px; color: #FFFFFF; text-decoration: none }
+a.newmenu:hover
+{ text-decoration: underline; }
+.mtM10px {margin-top:-10px}
+.mtM5px {margin-top:-5px}
+.mt8px {margin-top:8px}
+.mtM15ml3 { margin-top:-15px; marginleft:15px;}
+.mtM15ml3 { margin-left:15}
+.mlM15 {  margin-left:-15;}
+.fs4px {font-size:4px}
+.fs6px {font-size:6px}
+.fs1px {font-size:1px}
+.fs1px {fontsize:"1px;"}
+.fs11px {font-size:11px}
+.fs11px {fontSize:11px;}
+.bl14pt {font-size:14pt; color:black;}
+.r14pt {font-size:14pt; color:red;}
+.fs14pt {font-size:14pt;}
+.fs14px {font-size:14px;}
+.fs14pxj {font-size:14px; text-align: justify;}
+.fs14pxj b{font-size:14px; text-align: justify; font-weight:bold;}
+.fs14px b{font-size:14px; font-weight:bold;}
+.fs10pt {font-size:10pt;}
+.fs10ptb {font-size:10pt; font-weight:bold;}
+.fs8pt  {font-size:8pt;}
+
+
+7080B0
+margin-left:0; margin-right:0;

@@ -1,0 +1,40 @@
+<HEAD><TITLE>St. Petersburg Group of NKAU</TITLE>
+<META content="text/html; charset=koi8-r" http-equiv=Content-Type>
+<script language="javascript">
+<!-- 
+br_name = navigator.appName; br_ver = parseFloat(navigator.appVersion); 
+// alert(""+br_name+":::"+br_ver+" !!!:"+parseFloat(navigator.appVersion) );
+
+dom = (document.getElementById)? true : false;
+nn4 = (document.layers)? true : false;
+ie4 = (!dom && document.all)? true : false;
+
+nn6=false; ie5=false;
+if (br_name == 'Netscape' && br_ver >= 5.0) {nn6=true; }
+else
+ if (br_name == 'Microsoft Internet Explorer' && br_ver >= 4.0 && !ie4) {ie5=true; }
+
+old=!(dom||nn4||ie4||ie5||nn6);
+//alert("dom:"+dom+" nn4:"+nn4+" ie4:"+ie4+" ie5:"+ie5+" nn6:"+nn6+" old:"+old);
+//-->
+</script>
+
+
+</HEAD>
+<script language="JavaScript">
+<!-- // for ie4 & others: script vs < frameset ...>
+s='<FRAMESET rows="86,*"  frameborder=no border=0>';
+s1='<FRAMESET rows="98,*"  frameborder=no border=0>';
+//alert(" S=="+s+" s1=="+s1)
+if(!ie4) document.write(s);  else document.write(s1);
+s=""; s1="";
+// -->
+</script>
+
+
+<!-- FRAMESET rows="86,*"  frameborder=no border=0 -->
+  <FRAME name="upfr" id="upfr" SRC="eupfr.html" scrolling=no frameborder=0>
+  <FRAME NAME="dnfr" id="dnfr" src="esost.html" frameborder=no>
+</FRAMESET>
+</HTML>
+

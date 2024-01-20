@@ -1,0 +1,130 @@
+\documentstyle{article}
+
+\topmargin=-10mm
+\oddsidemargin=-5mm
+\evensidemargin=-5mm
+\textwidth 16cm
+\textheight 23cm
+\hfuzz=1.5pt
+\makeindex
+
+\font\msbm=msbm10 scaled 1200
+\font\wr=jwr8 scaled 1200
+\font\wit=jwti8 scaled 1200
+
+\def\al {\alpha}
+\def\ba{\begin{array}}
+\def\be {\beta}
+\def\br {\hbox{\msbm R}}
+\def\de {\delta}
+\def\ea{\end{array}}
+\def\e  {\eta}
+\def\ga {\gamma}
+\def\f  {\frac}
+\def\la {\lambda}
+\def\liml{\lim\limits}
+\def\om {\omega}
+\def\sg {\sigma}
+\def\t  {\tau}
+\def\ve {\varepsilon}
+
+
+\begin{document}
+\pagestyle{plain}
+\large
+
+\begin{center}
+ФУНКЦИИ ЛЯПУНОВА В ОЦЕНКАХ РАЗМЕРНОСТИ
+
+АТТРАКТОРОВ ДИНАМИЧЕСКИХ СИСТЕМ
+
+\medskip
+
+{\it Г.А.Леонов}
+
+\smallskip
+
+{Dept. of Mathematics and Mechanics}
+
+{St.Petersburg State University}
+
+{2, Bibliotechnaya pl., Peterhof}
+
+{St.Petersburg 198504, Russia}
+
+{leonov@math.spbu.ru}
+\end{center}
+
+\medskip
+
+{\wit
+Аннотация:
+}
+
+\bigskip
+
+\medskip
+
+Статья является текстом доклада, прочитанного автором на
+Рохлинском мемориале в августе 1999 года. В ней содержится обзор
+результатов по оценках размерности аттракторов с помощью функций
+Ляпунова.
+
+На этом пути оказалось возможным получить очень простые формулы
+для вычсления ляпуновской размерности аттракторов Хенона и
+Лоренца.
+
+Рассмотрим отображение Хенона $F:\br^2\to\br^2$
+$$
+\ba{l}
+z\to a+by-z^2,\cr
+y\to z,
+\ea
+$$
+где $a>0$, $b\in(0,1)$.
+Будем рассматривать здесь ляпуновскую размерность $\dim_L\,K$
+инвариантного множества $K$: $FK=K$, содержащего стационарные точки
+$$
+z_{\pm}=\f12\,\left[b-1\pm\sqrt{(b-1)^2+4a}\,\right].
+$$
+
+{\bf Теорема 1.} {\it
+Для отображения $F$ справедливо равенство
+$$
+\dim_L\,K=1+\f1{1-\ln b/\ln\al(z_-)}\,,
+$$
+где $\al(z_-)=\sqrt{z_-^2+b}-z_-$.
+}
+
+\medskip
+
+Рассмотрим систему Лоренца
+$$
+\ba{l}
+\dot x=-\sg x+\sg y,\cr
+\dot y=rx-y-xz,\cr
+\dot z=-bz+xy,
+\ea \eqno(1)
+$$
+где $r,b,\sg$ --- положительные числа. Предположим, что
+$$
+\ba{l}
+b\geq2,\qquad \sg+1\geq b,\cr
+r\sg^2(4-b)+2\sg(b-1)(2\sg-3b)>b(b-1)^2
+\ea
+$$
+и обозначим через $K$ инвариантное множество системы (1),
+содержащее точку $x=y=z=0$.
+
+\medskip
+
+{\bf Теорема 2.} {\it
+Имеет место равенство
+$$
+\dim_L\,K=3-\f{2(\sg+b+1)}{\sg+1+\sqrt{(\sg-1)^2+4r\sg}}\,.
+$$
+}
+
+
+\end{document}
+

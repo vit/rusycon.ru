@@ -1,0 +1,1227 @@
+\documentstyle{article}           % tr r al gr sp
+\topmargin=-10mm
+\oddsidemargin=8mm
+\evensidemargin=8mm
+\textwidth 16cm
+\textheight 21cm
+\hfuzz=1.5pt
+\makeindex
+
+\def\al   {\alpha}
+\def\ba   {\begin{array}}
+\def\be   {\beta}
+\def\br   {\hbox{\BB R}}
+\def\ds   {\displaystyle}
+\def\DE   {\Delta}
+\def\ea   {\end{array}}
+\def\f    {\frac}
+\def\ga   {\gamma}
+\def\intl {\int\limits}
+\def\la   {\lambda}
+\def\liml {\lim\limits}
+\def\NE   {{\cal N}_\ve}
+\def\om   {\omega}
+\def\omd  {\om_d}
+\def\pr   {\partial}
+\def\rn   {\hbox{\BB R}^n}
+\def\sg   {\sigma}
+\def\suml {\sum\limits}
+\def\supl {\sup\limits}
+\def\sub  {\subset}
+\def\t    {\tau}
+\def\th   {\theta}
+\def\tim  {\times}
+\def\ve   {\varepsilon}
+\def\vk   {\hbox{\rm \ae}}  %{\varkappa}
+\def\vp   {\varphi}
+\def\wt   {\widetilde}
+
+%\newcommand{\tso}{\mathop{\to}}
+\newcommand{\varlimsup}{\mathop{\overline{\lim}}}
+
+\font\BB=msbm10
+
+\def\Ž {Ž\,¯\,à\,¥\,¤\,¥\,«\,¥\,­\,¨\,¥\ \,} %{Ž…„…‹…ˆ…}\ \,}
+\def\’ {\bf ’\,¥\,®\,à\,¥\,¬\, \ \,}
+\def\Doc {{„\,®\,ª\, \,§\, \,â\,¥\,«\,ì\,á\,â\,¢\,®}}
+\def\‹ {\bf ‹\,¥\,¬\,¬\, \ \,}
+\def\ {\,à\,¨\,¬\,¥\,à\ \,}
+
+
+\pagestyle{plain}
+%\setcounter{page}{4}
+\begin{document}
+\large
+
+\noindent
+“„Š 531.36
+\begin{center}
+{\bf
+THE LYAPUNOV FUNCTIONS IN ESTIMATES OF A DIMENSION OF DYNAMICAL
+SYSTEM ATTRACTORS
+}
+
+\medskip
+
+G.A. Leonov
+\end{center}
+
+\bigskip
+
+The present work was reported  the Rokhlin memorial conference in August
+1999.
+\medskip
+
+It is well known that the numerical characteristics of harmonic oscillations
+are the following: an amplitude, a period, a frequency
+and for a periodic oscillation this is a period. Numerous investigations show
+that more complicated oscillations have also numeric characteristics, namely,
+the dimensions of attractors, which correspond to the ensembles
+of such oscillations.
+
+The theory of topological dimensionality [1, 2], developed
+in the first half of the last century, is not suitable for a scale
+of dimensional characteristics of attractors to be given.
+The cause is that a topological
+dimension can take on integer values only and a scale of dimensional
+characteristics, obtained in such a way, turns out to be poor.
+
+
+In studying the attractors the Hausdorff dimension of sets is more suitable.
+This dimensional characteristic can have any nonnegative values and
+for Euclidean space usual objects like a smooth curve, a surface,
+and a countable set of points it coincide with the
+topological dimension.
+
+
+Often, the attractors that have a nonintegral Hausdorff dimension are called
+strange attractors. At present by means of computer experiments many of
+the strange attractors are found, which describe complicated oscillations
+occuring in nature and technics [3---6].
+
+
+Let us now define the Hausdorff dimension of sets.
+
+We consider a compact metric set $X$ with  metric $\rho$, a subset $E\sub X$,
+and the numbers $d\geq0$, $\ve>0$.
+
+Cover $E$ by the balls of radii $r_j<\ve$ and denote
+$$
+\mu_H(E,d,\ve)=\inf\suml_j r_j^d,
+$$
+where the infimum is taken over all such $\ve$-covers of $E$.
+
+Obviously, $\mu_H(E,d,\ve)$ does not decrease with decreasing $\ve$.
+Therefore there exists a limit (which may also be infinite) such that
+$$
+\mu_H(E,d)=\liml_{\ve\to0}\mu_H(E,d,\ve).
+$$
+
+D\,e\,f\,i\,n\,i\,t\,i\,o\,n\, 1. The function $\mu_H(\cdot,d)$ is called a
+{\it $d$-measure of Hausdorff}.
+
+For a fixed $d$ the  function $\mu_H(E,d)$ has all the properties of an outer
+measure on $X$.
+
+For a fixed set $E$ the function $\mu_H(E,\cdot)$ has the following property.
+There exists  $d_{cr}\in[0,\infty]$ such that
+$$
+\ba{l}
+\mu_H(E,d)=\infty,\quad\forall\,d<d_{kp},\cr
+\mu_H(E,d)=0,\quad\forall\,d>d_{cr}.
+\ea
+$$
+If $X\sub\rn$, then $d_{cr}\leq n$. Here $\rn$ is an Euclidean $n$-dimensional
+space.
+
+Put
+$$
+\dim_HE=d_{cr}=\inf\big\{d|\ \mu_H(E,d)=0\big\}.
+$$
+
+D\,e\,f\,i\,n\,i\,t\,i\,o\,n\,  2. The quantity $\dim_HE$ is called the
+{\it Hausdorff dimension} of set  $E$.
+
+E\,x\,a\,m\,p\,l\,e\, 1.
+Consider a Cantor set
+$$
+E=\bigcap\limits_{j=0}^\infty E_j,
+$$
+where $E_0=[0,1]$ and $E_j$ consist of $2^j$ segments of length $3^{-j}$,
+obtained from segments entering $E_{j-1}$ by deleting the midpoints
+of the open intervals of lengths $3^{-j}$ (Fig. 1).
+
+\vspace*{3.3cm}
+\centerline{Fig. 1.}
+\bigskip
+
+>From the classic theory of topological dimension it is well known that
+$\dim_TE=0$.
+
+In addition from the definition of the Hausdorff dimension it follows that
+$\mu_H(E,d)=1$ for $d=\log2/\log3=0,6309...$ and, consequently,
+$$
+\dim_HE=\f{\log2}{\log3}\,.
+$$
+
+A topological dimension is invariant to
+homeomorphismes. The Hausdorff dimension is invariant to
+diffeomorphismes, and the nonintegral Hausdorff dimension is not invariant
+to homeomorphismes [2].
+
+When considering the attractors of dynamic systems in the phase spaces
+the smooth coordinate changes are often used. Therefore in these cases it is
+sufficient that there exists the invariance with respect to diffeomorphismes.
+
+It is well known that $\dim_TE\leq\dim_HE$. In the case of
+the Cantor set  $E$  this inequality is strict.
+
+Let us give now two equivalent definitions of fractal dimension.
+
+Denote by $\NE(E)$ a minimal number of the balls of radius $\ve$
+ to be necessary to cover a set  $E\sub X$.
+
+Take the numbers $d\geq0$, $\ve>0$ and put
+$$
+\ba{l}
+\mu_F(E,d,\ve)=\NE(E)\ve^d,\cr
+\mu_F(E,d)=\varlimsup\limits_{\ve\to0}\mu_F(E,d,\ve).
+\ea
+$$
+
+D\,e\,f\,i\,n\,i\,t\,i\,o\,n\, 3.
+A value
+$$
+\dim_FE=\inf\{d|\ \mu_F(E,d)=0\}.
+$$
+is called {\it a fractal dimension} of set $E$.
+
+Note that a scheme of the introduction of this definition is similar to that given for
+the Hausdorff dimension. But here the coverings are performed by the balls of
+the same radius $\ve$.
+
+\medskip
+
+D\,e\,f\,i\,n\,i\,t\,i\,o\,n\, 4.
+{\it A fractal dimension} of set  $E$ is a quantity
+$$
+\dim_FE=\varlimsup\limits_{\ve\to0}\f{\log\NE(E)}{\log(1/\ve)}\,.
+$$
+
+It is easy to see that
+$$
+\dim_HE\leq\dim_FE.
+$$
+
+E\,x\,a\,m\,p\,l\,e\, 2.
+For $X=[0,1]$ and $E=\{0,1,2^{-1},3^{-1},\ldots\}$
+$$
+\dim_HE=0,\quad \dim_FE=\f12\,.
+$$
+
+Some extension of schemes of an introduction of the Hausdorff
+and fractal measures
+and dimensions and the definitions of different metrical dimensional
+characteristics are given in [7].
+
+We can see [8--13] that the upper estimate of the Hausdorff and fractal
+dimensions of invariant sets is the Lyapunov dimension. Let us give its
+definition.
+
+Consider some continuously differentiable mapping $F$ of a set $U\sub\rn$
+into $\rn$. Denote by $T_xF$ the Jacobian matrix of the mapping $F$ at the
+point $x$. From the continuous differentiability of $F$ it follows that
+$$
+F(x+h)-F(x)=(T_xF)h+o(h).
+$$
+We assume further that a set  $K\sub U$ is invariant with respect to
+the mapping $F:\ F(K)=K$.
+
+Consider singular numbers of  $n\tim n$-matrix $A$
+$$
+\al_1(A)\geq\ldots\geq\al_n(A).
+$$
+
+Recall that {\it a singular number} of matrix  $A$ is a square root from
+an eigenvalue of matrix  $A^*A$. Here $*$ denotes the operation of
+transposition (in the real case) or that of the Hermitean conjugacy.
+
+\medskip
+
+D\,e\,f\,i\,n\,i\,t\,i\,o\,n\, 5. {\it A local Lyapunov
+dimension of  mapping $F$ at the point $x\in K$} is a number
+$$
+\dim_L(F,x)=j+s,
+$$
+where $j$ is the greatest integer number from the segment $[1,n]$, for which
+$$
+\al_1(T_xF)\ldots\al_j(T_xF)\geq1,
+$$
+and the number $s\in[0,1]$ is such that
+$$
+\al_1(T_xF)\ldots\al_j(T_xF)\al_{j+1}(T_xF)^s=1.
+$$
+
+By definition we have $\dim_L(F,x)=0$ in the case $\al_1(T_xF)<1$  and
+$\dim_L(F,x)=n$ in
+the case
+$$
+\al_1(T_xF)\ldots\al_n(T_xF)\geq1.
+$$
+
+
+\medskip
+
+D\,e\,f\,i\,n\,i\,t\,i\,o\,n\, 6.  {\it The Lyapunov dimension
+of the mapping $F$ of set $K$} is a number
+$$
+\dim_L(F,K)=\supl_K\dim_L(F,x).
+$$
+
+D\,e\,f\,i\,n\,i\,t\,i\,o\,n\, 7. {\it A local Lyapunov
+dimension of a sequence of mappings  $F^i$ at the point $x\in K$} is a number
+$$
+\dim_Lx=\varlimsup\limits_{i\to+\infty}\dim_L(F^i,x).
+$$
+
+D\,e\,f\,i\,n\,i\,t\,i\,o\,n\, 8. {\it The Lyapunov dimension of a
+sequence of mappings $F^i$ of set $K$} is a number
+$$
+\dim_LK=\supl_K\dim_L x.
+$$
+
+For mappings $F_t$ depending on a parameter $t\in\br^1$ it makes possible to
+introduce the definitions similar to Definitions 7 and 8.
+
+\medskip
+
+D\,e\,f\,i\,n\,i\,t\,i\,o\,n\, 9. {\it A local Lyapunov dimension of a
+mapping $F_t$ at the point $x\in K$} is a number
+$$
+\dim_Lx=\varlimsup\limits_{t\to+\infty}\dim_L(F_t,x).
+$$
+
+D\,e\,f\,i\,n\,i\,t\,i\,o\,n\, 10. {\it The Lyapunov dimension of a mapping
+$F_t$ of set $K$} is a number
+$$
+\dim_LK=\supl_K\dim_Lx.
+$$
+
+Note once more that an important property of the Lyapunov dimension is an
+inequality [11--13] $\dim_FK\leq\dim_LK$.
+
+Thus
+$$
+\dim_TK\leq\dim_HK\leq\dim_FK\leq\dim_LK.
+\eqno(1)
+$$
+
+Note also that the  Lyapunov dimension can be a characteristic of the inner
+instability of a dynamic system, defined on the invariant set $K$ and
+generated by the family of mappings $F^i$ or $F_t$.
+
+The Lyapunov dimension is invariant with respect to the linear orthogonal
+operators.
+Sometimes this implies that in studying the concrete dynamic systems
+        some``good" (or the best, in a certain sense) basis must be found.
+
+It is necessary to note that if we pass from topological dimensions
+to the Hausdorff ones, we stretch a topology since the Hausdorff dimension
+is not invariant with respect to homeomorphismes. The introduction of
+the Lyapunov dimension is the next step in
+the pragmatic approach to the study of dynamic systems: the Lyapunov dimension
+is not a dimensional characteristic in the classical sense. But it makes
+possible,
+firstly, to estimate effectively from above the Hausdorff and  fractal
+dimensions. Secondly, it is a characteristic of instability of dynamic systems
+and, thirdly, it will be  "convenient" for the investigation  of a motion stability
+by the classical theory methods.
+
+Let us show this, using the Lyapunov functions in the estimates of the Lyapunov
+dimension. The idea to introduce the Lyapunov functions in the estimates
+of dimensional characteristics was formulated first in the work [14] and was
+developed further in [15--20, 9, 10]. Here we follow mainly these ideas.
+
+Consider a continuously differentiable function $p(x):U\to\br^1$, which
+satisfies the following condition
+$$
+p_1\leq p(x)\leq p_2,\quad\forall\,x\in U.
+$$
+Here $p_1$ and $p_2$ are some positive numbers.
+
+Let $j$ be an integer number from the segment  $[1,n]$, $\ s\in[0,1)$,
+$d=j+s$, $\ A$ be an $n\tim n$-matrix,
+$$
+\ba{l}
+\omd(A)=\al_1(A)\ldots\al_j(A)\al_{j+1}(A)^s,\cr\cr
+\ds \om(d,K,p,F)=\supl_K\omd\left(\f{p(F(x))}{p(x)}\,T_xF\right).
+\ea
+$$
+
+{\bf T\,h\,e\,o\,r\,e\,m\, 1.} {\it If $F(K)=K$ and the following inequality
+holds
+$$
+\om(d,K,p,F)<1,
+\eqno(2)
+$$
+then for sufficiently large natural  $i$ we have
+$$
+\dim_L(F^i,K)\leq d.
+\eqno(3)
+$$
+}
+
+P\,r\,o\,o\,f\,. For two  $n\times n$-matrices $A$ and $B$ the inequality  [21]
+$$
+\omd(AB)\leq\omd(A)\omd(B)
+\eqno(4)
+$$
+is well known.
+Using the relation
+$$
+T_xF^i=\left(T_{F^{i-1}(x)}F\right)\left(T_{F^{i-2}(x)}F\right)
+\ldots\left(T_xF\right),
+$$
+we  obtain
+$$
+T_xF^i=\f{p(x)}{p(F^i(x))}\,\left(\f{p(F^i(x))}{p(F^{i-1}(x))}\,
+T_{F^{i-1}(x)}F\right)\ldots\left(\f{p(F(x))}{p(x)}\,T_xF\right).
+$$
+This and inequality (4) imply the following estimate
+$$
+\omd(T_xF^i)\leq\supl_K\left(\f{p(x)}{p(F^i(x))}\right)^d
+\om(d,K,p,F)^i.
+$$
+>From this inequality, condition (2), and the definition of the Lyapunov
+dimension estimate (3) follows.
+
+As it will be shown further, the factors of the form
+$$
+\f{p(F(x))}{p(x)}
+$$
+in condition (2) play the role of the functions of the Lyapunov type.
+It can clearly be seen when studying  the dynamical systems generated by
+differential equations.
+
+Consider a system
+$$
+\f{dx}{dt}=f(t,x),\quad t\in\br^1,\ x\in\rn,
+\eqno(4)
+$$
+where $f(t,x)$ is a continuously differentiable $T$-periodic vector
+function $\br^1\tim\rn\to\rn$, $\ f(t+T,x)=f(t,x)$.
+
+Suppose that a solution $x(t,x_0)$ of system (4) with the initial data
+$x(0,x_0)=x_0$ are defined on the segment $[0,T]$ and denote by  $G_T$ a
+shift operator along a solution of system (4):
+$$
+G_Tq=x(T,q).
+$$
+Let us assume that for a certain set $K$ the following relation holds
+$$
+G_TK=K.
+$$
+Denote by  $J(t,x)$ the Jacobian matrix of vector function $f(t,x)$:
+$$
+J(t,x)=\f{\pr f(t,x)}{\pr x}\,.
+$$
+Let $\la_1(t,x)\geq\ldots\geq\la_n(t,x)$ be the eigenvalues of the matrix
+$$
+\f12\,\big(J(t,x)+J(t,x)^*\big).
+$$
+Here $*$ denotes an operation of conjugation.
+
+\medskip
+
+{\bf T\,h\,e,o\,r\,e\,m\, 2.} {\it Suppose, there exists an integer number
+$j\in[1,n]$, a number $s\in[0,1)$, and a continuously differentiable function
+$v(x)$ such that the following inequality
+$$
+\ba{l}
+\ds \supl_{q\in K}\intl_0^T\big(\la_1(t,x(t,q))+\ldots+\la_j(t,x(t,x))+\cr\cr
+\ds +s\la_{j+1}(t,x(t,q))+\dot v(x(t,q))\big)\,dt<0
+\ea \eqno(5)
+$$
+is satisfied.
+Then for sufficiently large natural $i$ the inequality holds
+$$
+\dim_L(G_T^i,K)\leq j+s.
+\eqno(6)
+$$
+}
+
+In the analysis of dynamical systems in accordance with the direct Lyapunov
+method it will sometimes be convenient to use a more rough condition rather than
+inequality (5):
+$$
+\ba{l}
+\ds \supl_{q\in K}\big(\la_1(t,x(t,q))+\ldots+\la_j(t,x(t,x))+\cr\cr
+\ds +s\la_{j+1}(t,x(t,q))+\dot v(x(t,q))\big)<0,\quad\forall\, t\in\br^1.
+\ea \eqno(7)
+$$
+
+To prove Theorem 2, we need a result to be valid for the linear system
+$$
+\f{dX}{dt}=A(t)X,
+\eqno(8)
+$$
+where $A(t)$ is a real continuous $n\times n$-matrix, $X(t)$ is an
+$n\tim n$-matrix being a solution of system (8) with the initial condition
+$X(0)=I$.
+
+Denote by  $\la_1(t)\geq\ldots\geq\la_n(t)$ the eigenvalues of the matrix
+$$
+\f12\,\big(A(t)+A(t)^*\big)
+$$
+and by $\sg_1(t)\geq\ldots\geq\sg_n(t)$ denote the singular numbers of the
+matrix $X(t)$.
+
+\medskip
+
+{\L\,e\,m\,m\,a\, 1.} {\it The following inequality holds
+$$
+\sg_1(t)\ldots\sg_j(t)\leq\exp\bigg(\intl_0^t\big(\la_1(\t)
++\ldots+\la_j(\t)\big)\,d\t\bigg).
+\eqno(9)
+$$}
+P\,r\,o\,o\,f\,. We can easily see that the numbers $\sg_k(t+\DE t)$ are
+the singular values of the matrix
+$$
+X(t+\DE t)=\big(I+A(t)\DE t+o(\DE t)\big) X(t).
+$$
+>From here and from inequality (4) it follows that
+$$
+\sg_1(t+\DE t)\ldots\sg_j(t+\DE t)\leq\be_1\ldots\be_j
+\sg_1(t)\ldots\sg_j(t),
+\eqno(10)
+$$
+where $\be_k$ are the singular values of the matrix $I+A(t)\DE t+o(\DE t)$.
+
+Recall that $\be_k^2$ is the  eigenvalue of the matrix
+$$
+\ba{l}
+\big(I+A(t)\DE t+o(\DE t)\big)^*\big(I+A(t)\DE t+o(\DE t)\big)=\cr
+=I+\big(A(t)^*+A(t)\big)\DE t+o(\DE t).
+\ea
+$$
+Thus, we have $\be_k^2=1+2\la_k(t)\DE t+o(\DE t)$ and, consequently,
+$$
+\be_k=1+\la_k(t)\DE t+o(\DE t).
+$$
+This and (10) imply that
+$$
+\ba{l}
+\sg_1(t+\DE t)\ldots\sg_j(t+\DE t)\leq\cr\cr
+\ds\bigg(1+\DE t\suml_{k=1}^j\la_k(t)+o(\DE t)\bigg)\sg_1(t)\ldots\sg_j(t).
+\ea \eqno(11)
+$$
+By (11)
+$$
+\f d{dt}\,\big[\sg_1(t)\ldots\sg_j(t)\big]\leq
+\bigg(\suml_{k=1}^j\la_k(t)\bigg)\big[\sg_1(t)\ldots\sg_j(t)\big].
+\eqno(12)
+$$
+Integrating differential inequality  (12), we obtain inequality (9).
+
+Note that the present proof of (9) is more natural and simple than
+the proves, given in [9, 10].
+
+P\,r\,o\,o\,f\, o\,f\, T\,h\,e\,o\,r\,e\,m \, 2.
+Denote
+$$
+H(t,q)=\f{\pr x(t,q)}{\pr q}\,.
+$$
+Substituting the solution  $x(t,q)$ into equation (4) and differentiating
+both sides with respect to $q$, we obtain
+$$
+\f{dH(t,q)}{dt}=J(t,x(t,q))H(t,q).
+$$
+By the lemma for the singular values  $\sg_1(t)\geq\ldots\sg_n(t)$
+of the matrix $H(t,q)$ we have
+$$
+\sg_1\ldots\sg_k\leq\exp\bigg(\intl_0^t(\la_1+\ldots+\la_k)\,d\t\bigg)
+$$
+for any  $k=1,\ldots,n$. From here and from the following equality
+$$
+\sg_1\ldots\sg_j\sg_{j+1}^s=(\sg_1\ldots\sg_j)^{1-s}(\sg_1\ldots\sg_{j+1})^s
+$$
+the estimate
+$$
+\sg_1\ldots\sg_j\sg_{j+1}^s
+\leq\exp\bigg(\intl_0^t(\la_1+\ldots+\la_j+s\la_{j+1})\,d\t\bigg)
+\eqno(13)
+$$
+follows.
+Put
+$$
+p(x)=\big(\exp v(x)\big)^{1/(j+s)}
+$$
+and multiply both sides of inequality (13) by the following expression
+$$
+\left(\f{p(x(t,q))}{p(q)}\right)^{j+s}=\exp\big[v(x(t,q)-v(q)\big]
+=\exp\bigg(\intl_0^t\dot v(x(\t,q))\,d\t\bigg).
+$$
+As a result, we obtain the inequality
+$$
+\ba{l}
+\ds \left(\f{p(x(t,q))}{p(q)}\right)^{j+s}\sg_1\ldots\sg_j\sg_{j+1}^s\leq\cr\cr
+\ds \leq\exp\bigg(\intl_0^t(\la_1+\ldots+\la_j+s\la_{j+1}+\dot v(x,\t,q))
+\,d\t\bigg).
+\ea
+$$
+This implies the following estimate
+$$
+\ba{l}
+\ds \al_1(t,q)\ldots\al_j(t,q)\al_{j+1}(t,q)^s\leq
+\exp\bigg(\intl_0^t\big(\la_1(\t,x(\t,q))+\cr\cr
+\ds +\ldots+\la_j(\t,x(\t,q))+s\la_{j+1}(\t,x(\t,q))+
+\dot v(x(\t,q))\big)d\t\bigg),
+\ea \eqno(14)
+$$
+where $\al_k(t,q)$ are the singular values of the matrix
+$$
+\f{p(x(t,q))}{p(q)}\,H(t,q).
+$$
+
+>From estimate (14) amd condition (5) of Theorem 2 it follows that there  exists
+a positive number $\ve$ such that the equality
+$$
+\al_1(T,q)\ldots\al_j(T,q)\al_{j+1}(T,q)^s\leq\exp(-\ve)
+$$
+is valid for all $q\in K$.
+
+Thus,  for $F=G_T$ all the conditions of Theorem 1 are satisfied, we have
+$$
+T_qF=T_qG_T=H(T,q),
+$$
+and therefore estimate (6) holds. Theorem 2 is proved.
+
+\medskip
+
+We now apply Theorems 1 and 2 to concrete dynamic systems,  constructing the
+Lyapunov functions $p(x)$ (in the discrete cases) and $v(x)$ (for dynamic
+systems of the form (4)).
+
+The  publication of results similar to those, formulated in Theorems 1 and 2
+[14], causes the construction of the Lyapunov functions for an estimation
+of dimensions of the invariant sets of dynamic systems [15--20, 9, 10].
+Following mainly these works we will demonstrate here the construction of the
+Lyapunov functions for the well-known dynamic systems with chaotic behavior:
+for the Hennon mapping and the  Lorenz and R\"ossler systems.
+
+Consider the  Hennon mapping $F:\br^2\to\br^2$
+$$
+\ba{l}
+x\to a+by-x^2,\cr
+y\to x,
+\ea \eqno(15)
+$$
+where $a>0$, $b\in(0,1)$ are parameters of mapping.
+
+Having performed the change of variables
+$$
+x\to x,\quad y\to y\sqrt{b}\,,
+$$
+we pass from (15) to a mapping $F_1$:
+$$
+\ba{l}
+x\to a+\sqrt{b}\ y-x^2,\cr
+y\to\sqrt b\ x.
+\ea \eqno(16)
+$$
+Consider now the invariant sets $K$ of mapping (16), $F_1K=K$, containing
+the stationary points of this mapping:
+$$
+\ba{l}
+\ds x_+=\f12\,\left[b-1+\sqrt{(b-1)^2+4a}\ \right],\cr\cr
+\ds x_-=\f12\,\left[b-1-\sqrt{(b-1)^2+4a}\ \right].
+\ea
+$$
+
+{\bf T\,h\,e\,o\,r\,e\,m\, 3.} {\it For the mapping  $F_1$ the following
+equality holds
+$$
+\dim_LK=1+\f1{1-\ln b/\ln\al_1(x_-)}\,,
+$$
+where
+$$
+\al_1(x_-)=\sqrt{x_-^2+b}-x_-.
+$$
+}
+
+P\,r\,o\,o\,f\,.
+The Jacobian matrix $T_xF_1$ of the mapping $F_1$ is as follows
+$$
+\left(\matrix{ -2x&\sqrt b\cr \sqrt b&0}\right).
+$$
+Let us show that the  singular values of this matrix are the following
+$$
+\ba{l}
+\al_1(x)=\sqrt{x^2+b}+|x|,\cr\cr
+\ds \al_2(x)=\sqrt{x^2+b}-|x|=\f b{\al_1(x)}\,.
+\ea \eqno(17)
+$$
+Obviously
+$$
+\ba{l}
+\al_1(x)^2=2x^2+b+2|x|\,\sqrt{x^2+b}\ ,\cr
+\al_2(x)^2=2x^2+b-2|x|\,\sqrt{x^2+b}\ .
+\ea
+$$
+Hence we can see that  $\al_k(x)^2$ are the zeros of the polynomial
+$$
+\la^2-(4x^2+2b)\la+b^2,
+$$
+which is a characteristic polynomial of the matrix
+$$
+\left(\matrix{-2x&\sqrt b\cr \sqrt b&0}\right)
+\left(\matrix{-2x&\sqrt b\cr \sqrt b&0}\right).
+$$
+Thus, formulas (17) are proved.
+
+>From Theorem 1 it follows that if there exists a number $s\in[0,1)$ and a
+continuously differentiable positive on $K$ function  $p(\xi)$,
+$$
+\xi=\left(\matrix{x\cr y}\right),
+$$
+such that the following inequality holds
+$$
+\supl_{\xi\in K}\al_1(x)\al_2(x)^s\,\f{p(F_1(\xi))}{p(\xi)}<1,
+\eqno(18)
+$$
+then we have
+$$
+\dim_LK\leq1+s.
+$$
+
+Put
+$$
+p(\xi)=e^{\ga(1-s)(x+\sqrt b\ y)},
+$$
+where $\ga$ is a positive running parameter.
+
+We can see that the relation
+$$
+\f{p(F_1(\xi))}{p(\xi)}=e^{\ga(1-s)(a+(b-1)x-x^2)}.
+$$
+is satisfied. Whence it follows
+that taking the logarithm, condition (18) takes the form
+$$
+\ba{l}
+\supl_K\big[\ln\al_1(x)+s\ln\al_2(x)+\ga(1-s)(a+(b-1)x-x^2)\big]=\cr
+=\supl_K\big[(1-s)\ln\al_1(x)+s\ln b+\ga(1-s)(a+(b-1)x-x^2)\big]<0.
+\ea
+$$
+This inequality is valid if
+$$
+s\ln b+(1-s)\vp(x)<0,\quad\forall\,x\in(-\infty,+\infty),
+$$
+where
+$$
+\vp(x)=\ln\left[\sqrt{x^2+b}+|x|\right]+\ga(a+(b-1)x-x^2).
+$$
+
+The inequalities $\ga>0$, $b-1<0$ imply the following estimate
+$$
+\vp(-|x|)\geq\vp(|x|).
+$$
+Therefore it is sufficient to consider the extremal points of the
+function $\vp(x)$ for $x\in(-\infty,0]$. In this set we have
+$$
+\vp'(x)=\f{-1}{\sqrt{x^2+b}}+\ga\big[(b-1)-2x\big],\quad
+\vp''(x)<0.
+$$
+Choosing
+$$
+\ga=\f1{(b-1-2x_-)\sqrt{x_-^2+b}}\,,
+$$
+we obtain: $\vp'(x_-)=0$. Consequently, under such a choice of $\ga$
+the inequality
+$$
+\vp(x)\leq\left(\sqrt{x_-^2+b}+|x_-|\right)=\ln\al_1(x_-)
+$$
+is satisfied. Thus, inequality (18) is true for all $s$, which satisfy
+the condition
+$$
+s>\f{\ln\al_1(x_-)}{\ln\al_1(x_-)-\ln b}\,.
+\eqno(19)
+$$
+Consequently, the following estimate
+$$
+\dim_LK\leq1+s
+$$
+is valid for all $s$, satisfying inequality (19). Passing to the limit, we
+obtain the following inequality
+$$
+\dim_LK\leq1+\f1{1-\ln b/\ln\al_1(x_-)}\,.
+\eqno(20)
+$$
+
+Note that the point $x=x_-$, $y=\sqrt b\ x_-$ is a fixed point of the
+mapping $F_1$. In this case we get
+$$
+\al_1(x_-)\al_2(x_-)^s=1,
+$$
+
+$$
+s=\f1{1-\ln b/\ln\al_1(x_-)}\,.
+$$
+This implies that a local Lyapunov dimension of this stationary point
+is equal to
+$$
+1+\f1{1-\ln b/\ln\al_1(x_-)}\,.
+\eqno(21)
+$$
+
+Relations (20) and (21) result in the statement of Theorem 3.
+
+\medskip
+
+Let us discuss the  result obtained.
+
+The running Lyapunov factor  $p(\xi)$ makes it possible to compute the Lyapunov
+dimension of any invariant set $K$, containing the point  $x=x_-$,
+$y=\sqrt b\ x_-$. Without this factor (more precisely, for $p(\xi)\equiv1$)
+it was necessary to use the localization of invariant sets in order to obtain
+the upper estimates of the Lyapunov dimension [12, 22] only.
+
+
+In many cases for the Lorenz system a  situation turns out to be the same.
+The use of the Lyapunov functions makes it possible to perform the precise
+calculation of the Lyapunov dimension of invariant sets for this system too.
+
+Consider the Lorenz system
+$$
+\ba{l}
+\dot x=-\sg x+\sg y,\cr
+\dot y=rx-y-xz,\cr
+\dot z=-bz+xy,
+\ea \eqno(22)
+$$
+where $r,b,\sg$ are positive numbers.
+
+Suppose, the following inequalities hold: $r>1$,
+$$
+b\geq2,\quad \sg+1\geq b.
+\eqno(23)
+$$
+
+Note that the strange attractors of system (22) were found
+by means of computer experiments
+for parameters  $b=8/3$, $\sg=10$, $r=28$ and $b=4$, $\sg=16$, $r=40$ [3--6].
+
+Under the assumption (23)  by using the linear change of variables
+$$
+x\to ax,\quad y\to\f{a(b-1)}\sg\,x+y,\quad z\to z,
+$$
+where
+$$
+a=\f\sg{\sqrt{2\sg+(b-1)(\sg-b)}}\,,
+$$
+system (22) takes the form
+$$
+\ba{l}
+\ds \dot x=(b-\sg-1)x+\f\sg a\,y,\cr\cr
+\ds \dot y=\f\sg a\,x-by-axz,\cr\cr
+\ds \dot z=-bz+\f{a^2(b-1)}\sg\,x^2+axy.
+\ea \eqno(24)
+$$
+
+Consider a shift operator along the trajectories of system (24) $G_T$, where
+$T$ is an arbitrary positive number. Let $K$ be an invariant set with
+respect to this operator $G_T$. Assume also that a set  $K$ contains the
+stationary point  $x=y=z=0$.
+
+We now find a formula for the Lyapunov dimension $\dim_LK$ of set  $K$
+with respect to a sequence of mappings $G_T^i$.
+
+\medskip
+
+
+{\bf T\,h\,e\,o\,r\,e\,m\, 4. } {\it Let inequalities (23) and
+$$
+r\sg^2(4-b)+2\sg(b-1)(2\sg-3b)>b(b-1)^2
+\eqno(25)
+$$
+be valid. Then
+$$
+\dim_LK=3-\f{2(\sg+b+1)}{\sg+1+\sqrt{(\sg-1)^2+4r\sg}}\,.
+\eqno(26)
+$$
+}
+
+P\,r\,o\,o\,f\,.
+The Jacobian matrix of the right side of system (24) is as follows
+$$
+J=\left(\matrix{
+(b-\sg-1)&\sg/a&0\cr
+(\sg/a)-az&-b&-ax\cr
+\ds \f{2a^2(b-1)}\sg\,x+ay& ax&-b}\right).
+$$
+For the following matrix
+$$
+\f12\,(J^*+J)=\left(\matrix{
+(b-\sg-1)&\ds\f\sg a-\f a2\,z&\ds \f{a^2(b-1)}\sg\,x+ay\cr\cr
+\ds \f\sg a-\f a2\,z&-b&0\cr\cr
+\ds \f{a^2(b-1)}\sg\,x+\f a2\,y& 0&-b}\right)
+$$
+we write its characteristic polynomial:
+$$
+\ba{l}
+\ds (\la+b)\bigg\{\bigg[\la^2+(\sg+1)\la+b(\sg+1-b)-\left(\f\sg
+a-\f{az}2\right)^2\bigg]-\cr\cr
+\ds -\left[\f{a^2(b-1)}\sg\,x+\f{ay}2\right]^2\bigg\}.
+\ea
+$$
+Whence it follows that the eigenvalues of the matrix  $(J^*+J)/2$ take the form
+$$
+\la_2(x,y,z)=-b,
+$$
+$$
+\ba{l}
+\ds \la_{1,3}(x,y,z)=-\f{\sg+1}2\pm\f12\,\bigg((\sg+1-2b)^2+\cr\cr
+\ds
++\left(\f{2\sg}a-az\right)^2+\left(\f{2a^2(b-1)}\sg\,x+ay\right)^2\bigg)^{1/2}.
+\ea
+$$
+By (23)
+$\la_1(x,y,z)\geq\la_2(x,y,z)\geq\la_3(x,y,z)$.
+
+Consider a function of the Lyapunov type
+$$
+v(x,y,z)=\f12\,a\th^2(1-s)\left(\ga_1x^2+\ga_2\left((y^2+z^2+
+\f{2a(b-1)}\sg\,xy\right)+\ga_3z\right),
+$$
+where $s\in(0,1)$,
+$$
+\ba{l}
+\ds
+\th^2=\left(2\sqrt{(\sg+1-2b)^2+\left(\f{2\sg}a\right)^2}\,\right)^{-1},\cr\cr
+\ds \ga_3=-\f{4\sg}{ab}\,,\quad\ga_2=\f a2,\cr\cr
+\ds \ga_1=-\f1{2\sg}\,\left[2\ga_2a^2\,\f{(r\sg-b^2+1)}\sg+\ga_3a^2+
+4\,\f{a^3(b-1)}\sg\right].
+\ea
+$$
+Consider also an expression
+$$
+\ba{l}
+2\big[\la_1(x,y,z)+\la_2(x,y,z)+s\la_3(x,y,z)+\dot
+v(x,y,z)\big]=\cr
+=-(\sg+1+2b)-s(\sg+1)+(1-s)\vp(x,y,z),
+\ea
+$$
+where
+$$
+\ba{l}
+\ds \vp(x,y,z)=\bigg((\sg+1-2b)^2+\left(\f{2\sg}a-az\right)^2+
+\left(\f{2a^2(b-1)}\sg\,x+ay\right)^2\bigg)^{1/2}+\cr\cr
+\ds
++\th^2\bigg\{\left(2a\ga_1(b-\sg-1)+2\ga_2a(b-1)+\ga_3a^3\f{b-1}\sg\right)x^2
+-2a\ga_2y^2-\cr\cr
+\ds -2a\ga_2bz^2+\left(2\sg\ga_1+2\ga_2\left(a^2\f{r\sg-b^2+1}\sg\right)+
+\ga_3a^2\right)xy-\ga_3abz\bigg\}.
+\ea
+$$
+Using the obvious inequality
+$$
+\sqrt u\leq\f1{4\th^2}+\th^2u,
+$$
+we obtain an estimate
+$$
+\ba{l}
+\ds \vp(x,y,z)\leq\f1{4\th^2}+\th^2\bigg\{(\sg+1-2b)^2+\left(\f{2\sg}a
+\right)^2+\cr\cr
+\ds +\left[2a\ga_1(b-\sg-1)+2\ga_2a(b-1)+\ga_3a^3\f{b-1}\sg+
+\f{4a^4(b-1)^2}{\sg^2}\right]x^2+\cr\cr
+\ds +[a^2-2a\ga_2]y^2+[a^2-2\ga_2ab]z^2+\bigg[2\ga_1\sg+2\ga_2a^2
+\f{r\sg-b^2+1}\sg+\cr\cr
+\ds +\ga_3a^2+4a^3\f{b-1}\sg\bigg\}xy-[\ga_3ab+4\sg]z\bigg\}.
+\ea
+$$
+Note that parameters  $\ga_1,\ga_2$ and $\ga_3$ are chosen in such a way that
+they satisfy the relation
+$$
+\ba{l}
+\ds \vp(x,y,z)\leq\f1{4\th^2}+\th^2\bigg\{(\sg+1-2b)^2+\left(\f{2\sg}a
+\right)^2+\cr\cr
+\ds +\bigg[2a\ga_1(b-\sg-1)+2\ga_2a(b-1)+\ga_3\f{a^3(b-1)}\sg+\cr\cr
+\ds +\f{4a^4(b-1)^2}{\sg^2}\bigg]x^2\bigg\}.
+\ea
+$$
+It is not difficult to prove that for the above
+parameters $\ga_1,\ga_2,\ga_3$ conditions (25) result in the equality
+$$
+2a\ga_1(b-\sg-1)+2\ga_2a(b-1)+\ga_3\f{a^3(b-1)}\sg+
+\f{4a^4(b-1)^2}{\sg^2}\leq0.
+$$
+Thus, for all $x,y,z$
+$$
+\vp(x,y,z)\leq\sqrt{4r\sg+(\sg-1)^2}\ .
+$$
+Whence it follows that for any number
+$$
+s<s_0=\f{\sqrt{4r\sg+(\sg-1)^2}-2b-\sg-1}{\sqrt{4r\sg+(\sg-1)^2}+\sg+1}
+$$
+there exists a number $\ve>0$ such that for all $x,y,z$ the following estimate
+holds
+$$
+\la_1(x,y,z)+\la_2(x,y,z)+s\la_3(x,y,z)+\dot v(x,y,z)<-\ve.
+$$
+
+Letting $s$ tend to $s_0$ from the right and using Theorem 2,
+we obtain an estimate
+$$
+\dim_LK\leq3-\f{2(\sg+b+1)}{\sg+1+\sqrt{(\sg-1)^2+4r\sg}}\,.
+\eqno(27)
+$$
+
+It is easy to see that the local Lyapunov dimension of the stationary point
+$x=y=z=0$ of system (24) is equal to
+$$
+3-\f{2(\sg+b+1)}{\sg+1+\sqrt{(\sg-1)^2+4r\sg}}\,.
+\eqno(28)
+$$
+Relations (27) and (28) imply formula (26).
+
+We make the following remark concerning the statements of Theorems 3 and 4.
+
+It is clear that the quantity $\al_1(x_-)$ is also an eigenvalue of the
+Jacobian matrix for the Hennon mapping at the point  $x=x_-$, $y=y_-$.
+
+Using formula (26), we can see that $\sg+b+1$ is a spur of the Jacobian
+matrix for the right side of system (22) and the number
+$$
+\sg+1+\sqrt{(\sg-1)^2+4r\sg}
+$$
+is an eigenvalue of the Jacobian matrix for the right side of system (22)
+at the point $x=y=z=0$.
+
+Thus, the quantities
+$$
+\be_1=1+\f1{1-\ln b/\ln\al_1(x_-)}
+$$
+and
+$$
+\be_2=3-\f{2(\sg+b+1)}{\sg+1+\sqrt{(\sg-1)^2+4r\sg}}
+$$
+are invariants with respect to the linear nondegenerate transformations in the
+phase spaces of the Hennon and Lorenz systems. Therefore the estimates
+$$
+\dim_HK\leq\dim_FK\leq\be_j
+$$
+are invariant with respect to the linear nonsingular transformations.
+
+Consider the R\"ossler system
+$$
+\ba{l}
+\dot x=-y-z,\cr
+\dot y=x,\cr
+\dot z=-bz+a(y-y^2),
+\ea \eqno(29)
+$$
+where $a$ and $b$ are positive numbers.
+
+\medskip
+
+{\bf T\,h\,e\,o\,r\,e\,m\, 5.} {\it The invariant set  $K$ of system (29)
+satisfies the estimate
+$$
+\dim_LK\leq3-\f{2b}{b+\sqrt{(a+2b)^2+b^2+1}}\,.
+\eqno(30)
+$$
+}
+
+P\,r\,o\,o\,f\,. The Jacobian matrix for the right side of system (29)
+have the form
+$$
+J=\left(\matrix{0&-1&-1\cr
+1&0&0\cr  0&a(1-2y)&-b}\right).
+$$
+Therefore the characteristic polynomial of the symmetrized matrix
+$$
+\f12\,(J+J^*)=\left(\matrix{0&0&-1/2\cr
+0&0&a(1-2y)/2\cr  -1/2&a(1-2y)/2&-b}\right)
+$$
+is as follows
+$$
+\la^3+b\la^2-\f{1+a^2(1-2y)}4\,\la=0.
+$$
+Hence the eigenvalues $\la_j(x,y,z)$ of the matrix $(J^*+J)/2$ are the following
+$$
+\ba{l}
+\ds \la_1=\f12\,\left[-b+\sqrt{b^2+1+a^2(1-2y)^2}\,\right],\cr\cr
+\ds \la_2=0,\cr\cr
+\ds \la_3=\f12\,\left[-b-\sqrt{b^2+1+a^2(1-2y)^2}\,\right].
+\ea
+$$
+We can easily see that  $\la_1>\la_2>\la_3$ for all $y$.
+
+Consider an expression
+$$
+\ba{l}
+\ds \la_1+\la_2+s\la_3+\dot v=\f12\,\big[-(1+s)b+\cr
+\ds +(1-s)(b^2+1+a^2(1-2y)^2)^{1/2}+2\dot v\big],
+\ea \eqno(31)
+$$
+where $s\in[0,1)$.
+
+Now we choose the function $v$ of the Lyapunov type in the form
+$$
+v=\f12\,(1-s)\vk(z-bx).
+$$
+Here $\vk$ is a running parameter. In this case expression (31) takes the
+form
+$$
+\la_1+\la_2+s\la_3+\dot v=\f12\,\big[-(1+s)b+(1-s)\vp(y,\vk)\big],
+$$
+where
+$$
+\vp(y,\vk)=\sqrt{b^2+1+a^2(1-2y)^2}+\vk\big[(a+b)y-ay^2\big].
+$$
+
+For any number $\th\neq0$ the following relations hold
+$$
+\ba{l}
+\ds \vp(y,\vk)\leq\th^2\big[b^2+1+a^2(1-2y)^2\big]+\f1{4\th^2}+\cr\cr
+\ds +\vk\big[(a+b)y-ay^2\big]=\th^2(a^2+b^2+1)+\f1{4\th^2}-\cr\cr
+\ds -(\vk a-4\th^2a^2)y^2-\big[4\th^2a^2-\vk(a+b)\big]y.
+\ea
+$$
+If we choose variable parameters so that $\vk a>4\th^2a^2$, we obtain an
+inequality
+$$
+\vp(y,\vk)\leq\th^2(a^2+b^2+1)+\f1{4\th^2}+
+\f{[4\th^2a^2-\vk(a+b)]^2}{4(\vk a-4\th^2a^2)}\,.
+$$
+This implies that for
+$$
+\vk=4\th^2a\,\f{a+2b}{a+b}\,,\quad\th^2=\f1{2\sqrt{(a+2b)^2+b^2+a}}\,.
+$$
+the following estimate holds
+$$
+\vp(y,\vk)\leq\sqrt{(a+b)^2+b^2+1}\ .
+$$
+Thus, for any positive $s$, satisfying inequality
+$$
+s<s_0=1-\f{2b}{b+\sqrt{(a+2b)^2+b^2+1}},
+$$
+there exists a number $\ve>0$ such that it satisfies the inequality
+$$
+\la_1+\la_2+s\la_3+\dot v\leq-\ve
+$$
+for all $x,y,z$.
+
+By Theorem 2 and passing to the limit as $s\to s_0$, we obtain estimate (30).
+
+Note that without using the Lyapunov functions (i.e., assuming
+that $v\equiv$\,const) for system (29) it is impossible to obtain nontrivial
+estimates of the Lyapunov dimension starting from the condition
+$$
+\la_1+\la_2+s\la_2<0.
+$$
+For  $s<1$ and as $y\to\infty$ we have
+$$
+\la_1+\la_2+s\la_3\to+\infty.
+$$
+
+Note also that unlike the Hennon and Lorenz systems we obtain here only
+the upper estimate of the Lyapunov dimension. The precise computation of
+Lyapunov dimension for the R\"ossler systems is yet an unsolved problem.
+
+In addition, note that now for estimating the Lyapunov dimension
+the frequency method is developed, which
+is based on the use of the Lyapunov functions of the "quadratic form" type.
+Such an approach is described in the work [23].
+
+\newpage
+
+\centerline{REFERENCES}
+\bigskip
+
+1. K .Kuratowski.
+Topology. Academic press, New York, 1966.
+
+2. W.Hurewicz and  H. Wallman.
+Dimension Theory. Princeton University Press, 1941.
+
+3. Ya.G. Sinai and L.N Shilnikov. Strange attractors. Mathematics.
+News in foreign science, Vol. 22 [Russian translation], Moscow, 1981.
+
+4. H.G. Schuster H.G.
+Deterministic Chaos. Physik-Verlag, Weinheim, 1984.
+
+5. V.S. Anishchenko.
+Complex Oscillations in simple Systems [in Russian], Moscow, 1990.
+
+6. Yu.I Neimark and P.S.Landa.
+Stochastic and Chaotic Oscillation [in Russian], Moscou, 1987.
+
+7. Ya.B. Pesin. Uspekhi Matem. Nauk, Vol. 44, No. 4, 1998
+
+8. A. Douady and J. Oesterle.
+Dimension de Hausdorff des attracteurs. C.R. Acad. Sci. Paris.
+Ser. A. 290(24), 1980.
+
+9. G.A. Leonov, I.M. Burkin, and A.I. Shepeljavyj.
+Frequency Methods in Oscillation Theory. Kluwer. Dordrecht, 1996.
+
+10. G.A. Leonov, D.V. Ponomarenko, and V.D. Smirnova.
+Frequency-Domain Methods for Nonlinear Analysis. Theory and
+Applications.
+World Scientific. Singapure 1996.
+
+11. V.A. Boichenko, A. Franz, G.A. Leonov, and V. Reitmann
+Hausdorff and Fractal Dimension Estimates for Invariant Sets of
+Non-Injective Maps.
+Journal for Analysis and its Applications. Vol. 17, N1, 1998.
+
+12. B.R. Hunt.
+Maximum Local Lyapunov Dimension Bounds the Box Dimension of
+Chaotic Attractors.
+Nonlinearity. Vol. 9, N 4, 1996.
+
+13. Yu.S. Il'yashenko and Li Veigy.
+Nonlocal Bifurcations.
+MTSNMO-R, Moscow, 1999.
+
+14. G.A. Leonov.
+Vestnik Leningrad Univ. Math, No 3, 1991.
+
+15. G.A. Leonov.
+Vestnik Leningrad Univ. Math, No. 4, 1991.
+
+16. G.A. Leonov and V.A. Boichenko
+The Lyapunov Direct Method in the Estimation of the Hausdorff
+Dimension of Attractors.
+Acta Applicandae Mathematicae. V. 26, 1992.
+
+17. G.A. Leonov.
+Vestnik St.Petersburg Univ. Math., No. 4, 1995.
+
+18. G.A. Leonov.
+Vestnik St.Petersburg> Univ. Math., No. 1 1998.
+
+19. V.A. Boichenko and G.A. Leonov.
+On Estimates of Attractors Dimensions of the Hennon Mappings.
+Vestnik St.Petersburg Univ. Math., (in printing).
+
+20. G.A.Leonov and S.A. Ljashko S.A.
+Surprising Property of Lyapunov Dimension for Invariant Sets of
+Dynamical Systems.
+Preprint. Technische Universitat. Dresden. 2000.
+
+21. F.R. Gantmakher.
+Theory of Matrices [in Russian], Moscow, 1988.
+
+22. G.A. Leonov.
+Lyapunov Exponents and Problems of Linearization. From Stability
+to Chaos. St.Petersburg University Press. 1997.
+
+23. G.A. Leonov.
+Estimates of Attractors and Existing Homoclinic Orbits in the Lorenz System.
+Prikl. Mat. i Mekh. (in printing)
+
+\end{document}
+11
+
+

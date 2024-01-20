@@ -1,0 +1,153 @@
+\documentstyle{article}
+
+\topmargin=-10mm
+\oddsidemargin=-5mm
+\evensidemargin=-5mm
+\textwidth 16cm
+\textheight 23cm
+\hfuzz=1.5pt
+\makeindex
+
+\font\msbm=msbm10
+\font\wr=jwr8
+\font\wit=jwti8
+
+\def\al {\alpha}
+\def\be {\beta}
+\def\br {\hbox{\msbm R}}
+\def\de {\delta}
+\def\e  {\eta}
+\def\ga {\gamma}
+\def\f  {\frac}
+\def\la {\lambda}
+\def\liml{\lim\limits}
+\def\om {\omega}
+\def\sg {\sigma}
+\def\t  {\tau}
+\def\ve {\varepsilon}
+
+
+%\English
+
+\begin{document}
+\pagestyle{plain}
+\large
+
+\begin{center} {\bf
+THE BROCKETT STABILIZATION PROBLEM
+}
+\end{center}
+
+\centerline{\it Gennadij A. Leonov}
+
+\medskip
+
+\centerline{Dept. of Mathematics and Mechanics}
+\centerline{St.Petersburg State University}
+\centerline{2, Bibliotechnaya pl., Peterhof}
+\centerline{St.Petersburg 198504, Russia}
+\centerline{leonov@math.spbu.ru}
+
+\bigskip
+
+\bigskip
+
+{
+\centerline{Abstract}
+
+\smallskip
+
+R. Brockett has formulated in book ``Open problems in
+mathematical systems and control theory" (Springer 1999)
+the following problem.
+
+Given  a triple constant matrices $A,B,C$ under what circumstances does
+there exist a time-dependent matrix $K(t)$ such that the  system
+$$
+\f{dx}{dt}=Ax+BK(t)Cx,\quad x\in\br^n
+\eqno(1)
+$$
+is asymptotically stable.
+
+In a number of cases the answer to this question can be found by
+means of the following results.
+
+\medskip
+
+{\bf Theorem 1.} {\it
+Let there exist matrices $K_1$ and $K_2$ satisfying the following
+conditions:
+
+$1)$ a matrix $BK_1C$ has $n-1$ eigenvalues with negative real
+parts and $\det BK_1C=0$,
+
+$2)$ for a vector $u\neq0$, satisfying an equality $BK_1Cu=0$, and
+for a certain number $\la$, the vector-function
+$$
+\exp\big[(A+BK_2C+\la I)t\big]u
+$$
+is periodic.
+
+Then there exists a periodical matrix $K(t)$ such that system $(1)$
+is asymptotically stable.
+}
+
+\medskip
+
+{\bf Theorem 2.} {\it
+Let $n=2$ and there exist matrices $K_1$, $K_2$ such that
+the following conditions hold
+
+$1)$ $\det BK_1C=0$, $\ \hbox{\rm Tr}\,BK_1C\neq0$,
+
+$2)$ a matrix $A+BK_2C$ has complex eigenvalues.
+
+Then there exists a periodic matrix $K(t)$ such that system $(1)$
+is asymptotically stable.
+}
+
+\medskip
+
+{\bf Corollary.}
+Let $n=2$, $B$ is a column vector, $C$ is a row vector,
+$K(t)$ is a function, the transfer function has the form
+$$
+W(p)=C(A-pI)^{-1}B=\f{p+\ga}{p^2+\al p+\beta}\,,
+$$
+where $\ga\leq0$, $\al\ga>\beta$.
+
+If
+$$
+\ga^2-\al\ga+\beta>0
+$$
+then there exists a periodic function $K(t)$ such that system (1)
+is asymptotically stable.
+
+If
+$$
+\ga^2-\al\ga+\beta<0
+$$
+then there do not exist functions $K(t)$, for which system (1) is
+asymptotically stable.
+
+{\bf Theorem 3.} {\it
+Let $n=3$, $B$ is a column vector, $C$ is a row vector, $K(t)$ is
+function,  $CB\neq0$ and there exist a numbers $K_1,K_2$ satisfying the
+following conditions:
+
+$1)$ a matrix $A+K_1BC$ has two complex eigenvalues and one
+negative eigenvalue,
+
+$2)$ function
+$$
+C\exp[(A+K_2BC)t]B
+$$
+has at least one zero on interval $(-\infty,0)$.
+
+Then there exists a periodic function $K(t)$ such that system
+$(1)$ is asymptotically stable.
+}
+}
+
+\end{document}
+

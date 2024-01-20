@@ -1,0 +1,152 @@
+<head><title>St. Petersburg Group of NKAU/News</title>
+<META content="text/html; charset=koi8-r" http-equiv=Content-Type>
+
+<LINK rel="stylesheet" type="text/css" href="sheet.css">
+
+<script language="javascript">
+
+<!-- // #1 browser id 
+
+br_name = navigator.appName; br_ver = parseFloat(navigator.appVersion); 
+
+
+
+dom = (document.getElementById)? true : false;
+
+nn4 = (document.layers)? true : false;
+
+ie4 = (!dom && document.all)? true : false;
+
+
+
+nn6=false; ie5=false;
+
+if (br_name == 'Netscape' && br_ver >= 5.0) {nn6=true; }
+
+else
+
+ if (br_name == 'Microsoft Internet Explorer' && br_ver >= 4.0 && !ie4) {ie5=true; }
+
+
+
+old=!(dom||nn4||ie4||ie5||nn6);
+
+//alert("dom:"+dom+" nn4:"+nn4+" ie4:"+ie4+" ie5:"+ie5+" nn6:"+nn6+" old:"+old);
+
+//-->
+
+</script>
+
+
+
+</head>
+
+
+
+<script language=javascript><!-- // #2 set/unset
+
+
+
+function setLB(idd){ 
+
+//alert("this==top:"+(this==top)+" this==parent:"+(this==parent) );
+
+if (this==top) { //alert("this==top!"); 
+
+                 return;}
+
+if(nn6) {
+
+ parent.window.frames['upfr'].document.anchors[idd].style.backgroundColor='#638294';
+
+}
+
+
+
+if (ie5||ie4){ 
+
+ parent.window.frames['upfr'].document.anchors(idd).style.backgroundColor='#638294';
+
+}
+
+
+
+} // setLB
+
+
+
+function unsetLB(idd){
+
+//alert("this==top:"+(this==top)+" this==parent:"+(this==parent) );
+
+if (this==top) { //alert("this==top!"); 
+
+                 return;}
+
+
+
+if(nn6) { //alert("here!");
+
+parent.window.frames['upfr'].document.anchors[idd].style.backgroundColor='#a40000';
+
+}
+
+
+
+if (ie5||ie4){
+
+parent.window.frames['upfr'].document.anchors(idd).style.backgroundColor='#a40000';
+
+}
+
+
+
+}//unsetLB
+
+// -->
+
+</script>
+
+
+
+
+
+
+
+<BODY id=enews   BGCOLOR=#e6f0fa ALINK="#FF00FF"   VLINK="#FF0000" LINK="#0000FF"
+
+ onload="setLB('idenews');"
+
+ onbeforeunload="unsetLB('idenews');"
+
+ onunload="javascript:if(nn6)unsetLB('idenews');"
+
+>
+
+
+
+<TABLE width=760 nowrap border=0 cellspacing=0 align=center bordercolor=white>
+
+<TR><td width=15><font class=med>&nbsp;</font></td>
+
+<TD border=0>
+
+<center><font color="blue" class=lgtb>News</font></center>
+<div align=justify>
+The annual meeting of the Saint-Petersburg Group of Russian National 
+Committee on Automatic Control took place on February 18, 2009 in the 
+<a href=http://www.elektropribor.spb.ru target=_top">CSRI "Elektropribor"</a>. The events of the year 2008
+were discussed and the annual report of 2008 was approved.
+The  calendar of the <a href=econf.html>conferences of the year 2009</a> and the list
+of the <a href=esemi.html>seminars of the year 2009</a> were approved.
+</DIV>
+<hr>
+<font class=med>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last updated February 24, 2009
+
+</TD></TR>
+
+</TABLE>
+
+</body>
+
+</html>

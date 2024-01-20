@@ -1,0 +1,437 @@
+\documentstyle{article}
+
+\topmargin=-10mm
+\oddsidemargin=-5mm
+\evensidemargin=-5mm
+\textwidth 16cm
+\textheight 23cm
+\hfuzz=1.5pt
+\makeindex
+
+\font\msbm=msbm10
+\font\wr=jwr8
+\font\wit=jwti8
+
+\def\al {\alpha}
+\def\be {\beta}
+\def\br {\hbox{\msbm R}}
+\def\de {\delta}
+\def\e  {\eta}
+\def\ga {\gamma}
+\def\f  {\frac}
+\def\la {\lambda}
+\def\liml{\lim\limits}
+\def\om {\omega}
+\def\sg {\sigma}
+\def\t  {\tau}
+\def\ve {\varepsilon}
+
+
+%\English
+
+\begin{document}
+\pagestyle{plain}
+\large
+
+\begin{center} {\bf
+THE BROCKETT STABILIZATION PROBLEM
+}
+\end{center}
+
+\centerline{\it Gennadij A. Leonov}
+
+\medskip
+
+\centerline{Dept. of Mathematics and Mechanics}
+\centerline{St.Petersburg State University}
+\centerline{2, Bibliotechnaya pl., Peterhof}
+\centerline{St.Petersburg 198504, Russia}
+\centerline{leonov@math.spbu.ru}
+
+\bigskip
+
+\bigskip
+
+In the work [1]  R. Brockett has formulated the following problem.
+
+Given  a triple constant matrices $A,B,C$ under what circumstances does
+there exist a time-dependent matrix $K(t)$ such that the  system
+$$
+\f{dx}{dt}=Ax+BK(t)Cx,\quad x\in\br^n
+\eqno(1)
+$$
+is asymptotically stable.
+
+In [1] it was noted that the problem is still interesting  and unsolved
+in the case when  $K(t)$ is a scalar function.
+
+Notice that a stabilization of system (1) with help of a constant
+matrix  $K$ is a classical problem  of the control theory.
+A reformulation of the Brockett problem from this point of view
+is in following.
+
+How much would an application of a time dependent matrix $K(t)$ extend the
+capabilities of stabilization?
+
+In a number of cases the answer to this question can be found by means of
+the following algorithm for stabilization.
+
+Suppose that there exists a matrix $K_1$ such that a system
+$$
+\f{dx}{dt}=(A+B\mu K_1C)x
+\eqno(2)
+$$
+with a scalar parameter $\mu$  possesses a stable linear invariant manifold
+$L(\mu)$ for $\mu\geq\mu_0$. Here
+$\mu_0$ is some number.
+
+We also assume that
+$$
+\liml_{\mu\to+\infty}L(\mu)=L_0
+\eqno(3)
+$$
+and for any number  $\de>0$ there exists $\mu\geq\mu_0$ such that
+$$
+|x(1,x_0)|\leq\de,\quad\forall\,x_0\in\{|x_0|=1\}\cap L(\mu).
+\eqno(4)
+$$
+Here $x(0,x_0)=x_0$ and a limit (3) is understood in the sense that
+$L(\mu)\cap\{|x|\leq1\}$ is situated in a $\ve$-neighborhood of
+$L_0\cap\{|x|\leq1\}$, where $\ve\to0$ as  $\mu\to+\infty$.
+
+The assumption we have formulated means a fast convergence of trajectories
+on manifold  $L(\mu)$ for large parameter $\mu$.
+
+Let us denote by $M(\mu)$ a linear invariant manifold of system (2),
+for which we have
+$$
+\liml_{\mu\to+\infty}M(\mu)=M_0,
+$$
+$$
+\dim M(\mu)+\dim L(\mu)=n,\quad M(\mu)\cap L(\mu)=\{0\}.
+$$
+
+Suppose that $M(\mu)$ is a manifold of slow movements,
+i.e., there exists a number $R_1$ such that for all $\mu\geq\mu_0$ the
+inequality holds
+$$
+|x(1,x_0)|\leq R_1,\quad\forall\,x_0\in\{|x_0|=1\}\cap M(\mu).
+\eqno(5)
+$$
+
+Now assume that there exists a matrix $K_2$ such that for the system
+$$
+\f{dy}{dt}=(A+BK_2C)y
+\eqno(6)
+$$
+a number $\t$ exists such that
+$$
+Y(\t)M_0\subset L_0.
+\eqno(7)
+$$
+Here $Y(t)$ is a fundamental matrix of system (6), $Y(0)=I$.
+
+Let us denote a $(2+\t)$-periodic matrix $K(t)$ in the following way
+$$
+K(t)=\left\{\begin{array}{ll}
+\mu K_1 &\hbox{for}\quad t\in[0,1),\cr\cr
+K_2 &\hbox{for}\quad t\in[1,1+\t),\cr\cr
+\mu K_1 &\hbox{for}\quad t\in[1+\t,2+\t),
+\end{array}\right. \eqno(8)
+$$
+
+\smallskip
+
+{\bf Theorem 1.} {\it
+A system {\rm(1)} with a matrix $K(t)$ of the type {\rm(8)} for sufficiently
+large $\mu$ is asymptotically stable.}
+
+\medskip
+
+{\bf Proof.}
+The construction of manifolds $L_0$ and $M_0$ implies that for any
+number $\ve>0$ there exists $\mu_1\geq\mu_0$ satisfying the following
+property.
+
+For $t=1$ the solution $x(t,x_0)$ of system (1) with $\mu\geq\mu_1$
+and with the initial data
+$x_0=x(0,x_0)$, $|x_0|=1$ is situated in a $\ve$-neighborhood of manifold
+$$
+M_0\cap\{|x|\leq R_1\}.
+$$
+It is clear that there exists a number $R_2$ having the following property.
+For $t=1+\t$ the solution $x(t,x_0)$
+with the initial data $x_0=x(0,x_0)$, $|x_0|=1$
+is situated in an $R_2\ve$-neighborhood of manifold
+$$
+L_0\cap\{|x|\leq R_2\}.
+$$
+It can readily be seen that for $t=2+\t$ for the solution considered
+the following estimate
+$$
+|x(2+\t,x_0)|\leq\nu\ve
+$$
+is valid if $\mu$ is sufficiently large number, $\nu$ is some
+number.
+
+Choosing $\ve$ sufficiently small (and therefore $\mu$ sufficiently  large)
+we obtain that for all $x_0$ from a sphere $|x_0|=1$ the following estimate
+$$
+|x(2+\t,x_0)|<\f12\,
+$$
+is valid.
+The latter means an asymptotical stability  of system (1)
+with a periodical matrix $K(t)$ of the type (8).
+
+Theorem 1 implies some corollaries.
+
+Let us consider a periodic solution $z(t)$ of system
+$$
+\dot z=Qz,\quad z\in\br^n
+$$
+where $Q$ is an $(n\times n)$-matrix such that $\det Q\neq0$.
+
+\medskip
+
+{\bf Lemma.} {\it
+For any vector $h\in\br^n$ there exists a number $\tau$ such
+that $h^*z(\tau)=0$.}
+
+\medskip
+
+{\bf Proof.}
+Let $h^*z(t)>0$ $\ \forall\,t\in\br^n$. Then the periodicity of
+function $h^*z(t)$ implies the following relation
+$$
+\lim\limits_{t\to+\infty}\int\limits_0^t h^*z(t)\,dt=+\infty.
+$$
+On the other hand, we have
+$$
+\int\limits_0^t h^*z(t)\,dt=h^*Q^{-1}\big(z(t)-z(0)\big).
+$$
+Whence it follows that the integral is a bounded function for
+$t\geq0$. This contradiction proves the existence of a number
+$\tau$ such that $h^*z(\tau)=0$.
+
+\medskip
+
+{\bf Theorem 2.} {\it
+Let there exist matrices $K_1$ and $K_2$ satisfying the following conditions:
+
+$1)$ a matrix $BK_1C$ has $n-1$ eigenvalues with negative real parts and
+$\det BK_1C=0$,
+
+$2)$ for a vector $u\neq0$, satisfying an equality $BK_1Cu=0$, and for
+a certain number $\la$, the vector-function
+$$
+\exp\big[(A+BK_2C+\la I)t\big]u
+\eqno(9)
+$$
+is periodic.
+
+Then there exists a periodic matrix $K(t)$ such that system $(1)$
+is asymptotically stable.
+}
+
+\medskip
+
+To prove this theorem it is necessary to check a satisfaction of
+properties (3)--(7).
+
+>From hypothesis 1) of Theorem 2 the properties (3)--(5) follow. Here
+hyperplane $L_0$ is an $(n-1)$-dimensional stable manifold of
+the following linear system
+$$
+\f{dy}{dt}=BK_1Cy.
+$$
+
+>From hypothesis 2) of Theorem 2 and the lemma it follows that
+there exists $\tau$ such that
+$$
+\exp\big[(A+BK_2C)\tau\big]u\in L_0.
+\eqno(10)
+$$
+
+Thus, we can see that by Theorem 1 system (1) with a matrix of
+the type (8) is asymptotically stable.
+
+\medskip
+
+{\bf Theorem 3.} {\it
+Let $n=2$ and there exist matrices $K_1$, $K_2$, and number $\la$ such that
+the following conditions hold:
+
+$1)$ $\det BK_1C=0$ and $\hbox{\rm Tr}\,BK_1C\neq0$,
+
+$2)$ a matrix $A+BK_2C+\la I$ has purely imaginary eigenvalues.
+
+Then there exists a periodic matrix $K(t)$ such that system $(1)$
+is asymptotically stable.
+}
+
+\medskip
+
+ In order to prove this it should be noted that  hypothesis 1) of Theorem 3
+implies the existence
+of a nonzero eigenvalue of matrix $BK_1C$. If this eigenvalue is negative, then
+the hypothesis 1) of Theorem 2 is satisfied. If it is positive, then
+the hypothesis 1) of Theorem 2 is satisfied for the matrix $-K_1$.
+
+>From the hypothesis 2) of Theorem 3 it follows that
+the hypothesis 2) of Theorem 2 is satisfied.
+Theorem 3 is proved.
+
+We now consider a case that $n=2$, $\ B$ is a column vector and $C$ is a
+row vector. In this case the transfer function  $W(p)$ of system (1)
+takes the form
+$$
+W(p)=C(A-pI)^{-1}B=\f{\rho p+\ga}{p^2+\al p+\be}\,.
+$$
+
+Let $\rho\neq0$. Then, we can assume without loss of generality
+that $\rho=1$. Let us also suppose that the inequality holds
+$$
+\ga^2-\al\ga+\be\neq0.
+$$
+This condition assures a nondegeneracy of transfer function  $W(p)$.
+It is well known [2] that in this case system (1) can be reduced to
+the  following form
+$$
+\begin{array}{l}
+\dot\sg=\e,\cr\cr
+\dot\e=-\al\e-\be\sg-K(t)(\e+\ga\sg).
+\end{array} \eqno(11)
+$$
+Here $K(t)$ is a scalar function.
+
+The problem on a stabilization with help of
+a constant value $K(t)\equiv K_0$ has a positive solution if and
+only if
+$$
+\al+K_0>0,\quad \be+\ga K_0>0.
+$$
+For the existence of a number $K_0$, satisfying these inequalities,
+it is necessary and sufficient that the inequalities
+either $\ga>0$ or $\ga\leq0$, $\ \al\ga<\be$ where satisfied.
+
+Now we consider the case that a stabilization with help of a constant
+$K_0$ is impossible:
+$$
+\ga\leq0,\quad \al\ga>\be.
+$$
+
+Let us check the satisfaction of the hypotheses of Theorem 3. It can easily be
+seen that hypothesis 1) of Theorem 3 is satisfied.
+For a satisfaction of the hypothesis 2) of Theorem 3
+it is necessary and sufficient that for some numbers
+$k_2$ and $\la$ a polynomial
+$$
+p^2+(\al+k_2-2\la)p+(\be+k_2\ga-\la^2)
+$$
+has a purely imaginary zeroes. This is valid in the case that
+$$
+\al+k_2-2\la=0,\quad\be+k_2\ga-\la^2>0.
+\eqno(12)
+$$
+For the existence of $\la$ and $k_2$ both, satisfying condition (12),
+it is necessary and sufficient that the following inequality holds
+$$
+\ga^2-\al\ga+\be>0.
+\eqno(13)
+$$
+
+Thus, if inequality (13) is valid, then by Theorem 3
+there exists a periodic function $K(t)$ such that system (11)
+is asymptotically stable.
+
+This implies that if an inequality
+$$
+\ga^2-\al\ga+\be<0
+\eqno(14)
+$$
+is valid, then the estimate
+$$
+(\e+\ga\sg)^\bullet=(-\ga^2-\be+\al\ga)\sg>0,
+$$
+$\forall\,\sg>0$, $\e=-\ga\sg$ is true. Whence it follows that for $\sg(0)>0$,
+$\ \e(0)+\ga\sg(0)>0$ the inequality holds
+$$
+\e(t)+\ga\sg(t)>0,\quad\forall\,t\geq0.
+$$
+But then $\dot\sg(t)=\e(t)>0$, $\forall\,t\geq0$. Hence the instability
+of system (11) follows.
+
+Thus, we have proved the following result.
+
+\medskip
+
+{\bf Theorem 4.} [3] {\it
+If inequality $(13)$ holds, then system $(11)$
+is stabilized with help of a periodic function $K(t)$.
+
+If inequality $(14)$ holds, then  there do not exist functions $K(t)$,
+for which system $(11)$ is asymptotically stable.
+}
+
+\medskip
+
+This theorem was proofed also by another class of functions
+$K(t)$:
+$$
+K(t)=(K_0+K_1\om\cos\om t),\quad \om\gg1
+$$
+and averaging methods [4].
+
+Let us consider system (1) with  $n=3$, $C$ is row vector, $B$ is
+column vector, $K(t)$ is function: $\br^1\to\br^1$.
+
+{\bf Theorem 5.} {\it
+Let $CB\neq0$ and there exist a numbers $K_1,K_2$ satisfying the
+following conditions:
+
+$1)$ a matrix $A+K_1BC$ has two complex eigenvalues and one
+negative eigenvalue,
+
+$2)$ function
+$$
+C\exp[(A+K_2BC)t]B
+$$
+has at least one zero on interval $(-\infty,0)$.
+
+Then there exists a periodic function $K(t)$ such that system
+$(1)$ is asymptotically stable.
+}
+
+\bigskip
+
+\medskip
+\noindent
+{\bf References}
+
+\begin{itemize}
+\item[{[1]}]
+Brockett R.
+A stabilization problem.
+Open Problems in Mathematical Systems and Control Theory.
+Springer, 1999.
+
+\item[{[2]}]
+Lefschetz S.
+Stability of Nonlinear Control Systems.
+Academic Press. New York. 1965.
+
+\item[{[3]}]
+Leonov G.A.
+The Borckett Stabilization Problem.
+Proceedings of International Conference. Control of Oscillations
+and Chaos. St. Petersburg, Russia, July, 2000. P.38--39.
+
+\item[{[4]}]
+Morean L., Aeyels D.
+Stabilization by means of periodic output feedback. Proceedings
+of Conference of Decision and Control. Phoenix, Arizona USA,
+Desember 1999. P.108--109.
+\end{itemize}
+
+\end{document}
+

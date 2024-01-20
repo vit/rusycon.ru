@@ -1,0 +1,151 @@
+\documentstyle{article}
+
+\topmargin=-10mm
+\oddsidemargin=-5mm
+\evensidemargin=-5mm
+\textwidth 16cm
+\textheight 23cm
+\hfuzz=1.5pt
+\makeindex
+
+\font\msbm=msbm10 scaled 1200
+\font\wr=jwr8 scaled 1200
+\font\wit=jwti8 scaled 1200
+
+\def\al {\alpha}
+\def\be {\beta}
+\def\br {\hbox{\msbm R}}
+\def\de {\delta}
+\def\e  {\eta}
+\def\ga {\gamma}
+\def\f  {\frac}
+\def\la {\lambda}
+\def\liml{\lim\limits}
+\def\om {\omega}
+\def\sg {\sigma}
+\def\t  {\tau}
+\def\ve {\varepsilon}
+
+
+%\English
+
+\begin{document}
+\pagestyle{plain}
+\large
+
+\begin{center} {\bf
+О СТАБИЛИЗАЦИОННОЙ ПРОБЛЕМЕ БРОКЕТТА
+}
+\end{center}
+
+\centerline{\it Г.А.Леонов}
+
+\medskip
+
+\centerline{Dept. of Mathematics and Mechanics}
+\centerline{St.Petersburg State University}
+\centerline{2, Bibliotechnaya pl., Peterhof}
+\centerline{St.Petersburg 198504, Russia}
+\centerline{leonov@math.spbu.ru}
+
+\bigskip
+
+\bigskip
+
+\centerline{Аннотация:}
+
+
+\bigskip
+
+В книге ``Open problems in
+mathematical systems and control theory" (Springer 1999)
+Р.Брокетт поставил следующую проблему.
+
+Дана тройка матриц $A,B,C$. При каких условиях существует
+зависимая от времени матрица $K(t)$ такая, что система
+$$
+\f{dx}{dt}=Ax+BK(t)Cx,\quad x\in\br^n
+\eqno(1)
+$$
+асимптотически устойчива?
+
+В ряде случаев ответ на этот вопрос дают следующие результаты.
+
+\medskip
+
+{\bf Теорема 1.} {\it
+Пусть существуют матрицы $K_1$ и $K_2$ такие, что выполнены
+следующие условия:
+
+$1)$ матрица $BK_1C$ имеет $n-1$ собственное значение с
+отрицательными вещественными частями и $\det BK_1C=0$,
+
+$2)$ для вектора $u\neq0$, удовлетворяющего равенству
+$BK_1Cu=0$, и для некоторого числа $\la$ вектор-функция
+$$
+\exp\big[(A+BK_2C+\la I)t\big]u
+$$
+периодична.
+
+Тогда существует периодическая матрица $K(t)$ такая, что система
+$(1)$ асим\-п\-то\-ти\-чес\-ки устойчива.
+}
+
+\medskip
+
+{\bf Теорема 2.} {\it
+Пусть $n=2$ и существуют матрицы $K_1$ и $K_2$ такие, что
+выполнены следующие условия
+
+$1)$ $\det BK_1C=0$, $\ \hbox{\rm Tr}\,BK_1C\neq0$,
+
+$2)$ матрица $A+BK_2C$ имеет комплексные значения.
+
+Тогда существует периодическая функция $K(t)$ такая, что система
+$(1)$ асим\-п\-то\-ти\-чес\-ки устойчива.
+}
+
+\medskip
+
+{\bf Следствие.}
+Пусть $n=2$, $B$ и $C$ --- векторы, $K(t)$ --- функция:
+$\br^1\to\br^1$, передаточная функция имеет вид
+$$
+W(p)=C(A-pI)^{-1}B=\f{p+\ga}{p^2+\al p+\beta}\,,
+$$
+где $\ga\leq0$, $\al\ga>\beta$.
+
+Если
+$$
+\ga^2-\al\ga+\beta>0
+$$
+то существует периодическая функция $K(t)$ такая, что система
+$(1)$ асимптотически устойчива.
+
+Если
+$$
+\ga^2-\al\ga+\beta<0
+$$
+то не существует функций $K(t)$ таких, что система
+$(1)$ асимптотически устойчива.
+
+{\bf Теорема 3.} {\it
+Пусть $n=3$, $B$ и $C$ --- векторы, $K(t)$ --- функция:
+$\br^1\to\br^1$, $\ CB\neq0$ и существуют числа $K_1,K_2$ такие, что
+выполнены следующие условия:
+
+$1)$ матрица $A+K_1BC$ имеет комплексные собственные значения и
+одно отрицательное собственное значение,
+
+$2)$ функция
+$$
+C\exp[(A+K_2BC)t]B
+$$
+имеет по крайней мере один нуль на интервале $(-\infty,0)$.
+
+Тогда существует периодическая функция $K(t)$ такая, что система
+$(1)$ асим\-п\-то\-ти\-чес\-ки устойчива.
+}
+
+\end{document}
+
